@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Universo en Taza</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styleuniverse.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header style="background-color: #a2c4a6; color: white; padding: 10px;">
+    <h2>Universo en Taza</h2>
+    <input id="global-search" type="text" placeholder="Buscar en el sitio...">
+    <button id="menu-btn">☰ Menu</button>
+  </header>
+
+  <nav id="sidebar" class="sidebar">
+    <button id="close-btn">×</button>
+    <ul>
+      <li><a href="#">Teorías</a></li>
+      <li><a href="#">Formulas</a></li>
+      <li><a href="#">Experimentos</a></li>
+      <li><a href="#">Premios Nobel</a></li>
+      <li><a href="#">Grandes Científicos</a></li>
+      <li><a href="#">Sobre Nosotros</a></li>
+    </ul>
+
+    <div class="extra-info">
+      <h3>Más información</h3>
+      <p>
+        Aquí puedes colocar cuadros con información, enlaces, imágenes o cualquier contenido adicional que quieras mostrar cuando el menú esté abierto.
+      </p>
+    </div>
+  </nav>
+
+  <main>
+    <h2>Bienvenido a Universe en Taza</h2>
+    <p>
+      Explora el universo dentro de una taza — un lugar donde la creatividad, la ciencia y el arte se mezclan.
+      Haz clic en el botón de menú para descubrir más secciones.
+    </p>
+  </main>
+
+  <div>
+    <h1>Bienvenido a Universo en Taza</h1>
+    <p>Explora el fascinante mundo de la física y el universo desde la comodidad de tu taza de café. Aquí encontrarás teorías, fórmulas, experimentos y biografías de los científicos más influyentes.</p>
+    <h2>Secciones Destacadas</h2>
+    <img src="taza universo.png" style="width: 250px; height: fit-content;">
+  </div>
+
+  <div style="background-color: #a2c4a6; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%;">
+    <p>&copy; 2025 Universo en Taza. Explora el cosmos desde la comodidad de tu taza de café. Todos los derechos reservados.</p>
+  </div>
+
+  <!-- JavaScript for menu toggle -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
