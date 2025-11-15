@@ -1,61 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Universo en Taza</title>
+  <title>Unheard Words</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="styleuniverse.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  
 </head>
 
 <body>
-  <header style="background-color: #a2c4a6; color: white; padding: 10px;">
-    <h2>Universo en Taza</h2>
-    <input id="global-search" type="text" placeholder="Buscar en el sitio...">
-    <button id="menu-btn">☰ Menu</button>
+  <header>
+    <div>
+      <h1>Unheard Words</h1>
+
+      <form>
+        <input type="text" id="global-search" placeholder="Which emotion are you looking for?">
+        <button type="submit">Search</button>
+      </form>
+      
+      <button id="menu-btn">☰ Menu</button>
+    </div>
   </header>
 
   <nav id="sidebar" class="sidebar">
     <button id="close-btn">×</button>
-    <ul>
-      <li><a href="#">Teorías</a></li>
-      <li><a href="#">Formulas</a></li>
-      <li><a href="#">Experimentos</a></li>
-      <li><a href="#">Premios Nobel</a></li>
-      <li><a href="#">Grandes Científicos</a></li>
-      <li><a href="#">Sobre Nosotros</a></li>
+    <ul class="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Search by emotion</a></li>
+      <li><a href="#">Photo categories</a></li>
+      <li><a href="#">Inspiration</a></li>
+      <li><a href="#">My favorites</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="que_en_penses.html">Your opinion matters to us</a></li>
     </ul>
-
-    <div class="extra-info">
-      <h3>Más información</h3>
-      <p>
-        Aquí puedes colocar cuadros con información, enlaces, imágenes o cualquier contenido adicional que quieras mostrar cuando el menú esté abierto.
-      </p>
-    </div>
   </nav>
 
   <main>
-    <h2>Bienvenido a Universe en Taza</h2>
-    <p>
-      Explora el universo dentro de una taza — un lugar donde la creatividad, la ciencia y el arte se mezclan.
-      Haz clic en el botón de menú para descubrir más secciones.
-    </p>
+    <div class="main-banner">
+      <img src="images/Portada.jpg" alt="Unheard Words Banner">
+      <h2>Welcome to Unheard Words</h2>
+      <p> Discover the emotions behind every photograph and the stories they tell. Explore images that capture happiness, sadness, excitement, and more, and let each photo inspire your own journey.</p>
+    </div>
   </main>
 
-  <div>
-    <h1>Bienvenido a Universo en Taza</h1>
-    <p>Explora el fascinante mundo de la física y el universo desde la comodidad de tu taza de café. Aquí encontrarás teorías, fórmulas, experimentos y biografías de los científicos más influyentes.</p>
-    <h2>Secciones Destacadas</h2>
-    <img src="taza universo.png" style="width: 250px; height: fit-content;">
-  </div>
+  
 
-  <div style="background-color: #a2c4a6; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%;">
-    <p>&copy; 2025 Universo en Taza. Explora el cosmos desde la comodidad de tu taza de café. Todos los derechos reservados.</p>
-  </div>
+  <footer>
+    <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
+  </footer>
 
-  <!-- JavaScript for menu toggle -->
+
   <script>
     const menuBtn = document.getElementById('menu-btn');
-    const sidebar = document.getElementById('sidebar');
+    const sidebar = document.getElementById('sidebar'); // ahora coincide con el nav
     const closeBtn = document.getElementById('close-btn');
 
     menuBtn.addEventListener('click', () => {

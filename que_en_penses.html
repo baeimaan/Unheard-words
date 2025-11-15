@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" >
+    <title>Feedback Emocional</title>   
+    <link rel="stylesheet" href="styleform.css">
+</head>
+<body>
+<div>
+    <form>
+        <h2>Your opinion matters to us</h2>
+
+        <h3>Personal Information</h3>
+        <label>Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <br><br>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <label>Age</label>
+        <input type="number" id="age" placeholder="Enter your age" min="1" max="110" required>
+        <br><br>
+
+
+        <h3>What resolution do you prefer?</h3>   
+        <label>
+            <input type="radio" name="resolution" value="low" required>Low</label><br> 
+        <label>
+            <input type="radio" name="resolution" value="medium" checked required>Medium</label><br>        
+        <label>
+            <input type="radio" name="resolution" value="high" required>High</label><br><br>
+
+
+        <h3>Tell us how this photo made you feel.</h3>
+        <label>Choose an emotion</label>
+        <select id="emotion" name="emotion" required>
+            <option value="happy" selected>Happy</option>
+            <option value="sad">Sad</option>
+            <option value="angry">Angry</option>        
+            <option value="fear">Fear</option>
+            <option value="calm">Calm</option>
+            <option value="anxious">Anxious</option>    
+            <option value="excited">Excited</option>
+            <option value="bored">Bored</option> 
+            <option value="other">Other</other> 
+        </select>
+        <br><br>    
+
+        <label for="otherEmotion" id="otherLabel" style="display:none;">Please specify:</label>
+        <input type="text" id="otherEmotion" name="otherEmotion" placeholder="Your emotion..." style="display:none;">
+        <br><br>
+
+
+        <h3>Types of photos you're interested in:</h3> 
+        <fieldset id="photoTypes" required>
+            <legend>Choose at least one type:</legend>
+            <label><input type="checkbox" name="type" value="landscape" checked>Landscape</label><br> 
+            <label><input type="checkbox" name="type" value="urbana">Urbana </label><br> 
+            <label><input type="checkbox" name="type" value="retrats">Portraits</label><br><br>
+        </fieldset>
+        
+        <h3>Adittional comments</h3>
+        <p>Please share your ideas with us. If you have any suggestions for how we can improve, we would greatly appreciate it.</p>
+        <label for="comments">
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Your comments here..."></textarea>
+        </label>
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+        </form>
+    </div>
+
+<script>
+const form = document.querySelector('form');
+const checkboxes = document.querySelectorAll('input[name="type"]');
+
+// Validación de checkboxes: al menos uno debe estar marcado
+form.addEventListener('submit', function(e) {
+    let checked = 0;
+    checkboxes.forEach(cb => { if(cb.checked) checked++; });
+    if(checked === 0) {
+        e.preventDefault(); // Evita enviar el formulario
+        alert('Please select at least one type of photo.');
+    }
+});
+
+const emotionSelect = document.getElementById('emotion');
+const otherInput = document.getElementById('otherEmotion');
+const otherLabel = document.getElementById('otherLabel');
+
+emotionSelect.addEventListener('change', function() {
+    if (this.value === 'other') {
+        otherInput.style.display = 'inline';
+        otherLabel.style.display = 'inline';
+        otherInput.required = true;
+    } else {
+        otherInput.style.display = 'none';
+        otherLabel.style.display = 'none';
+        otherInput.required = false;
+    }
+});
+</script>
+
+<a href="unheardWords.html" class="btn-back">← Back to Home</a>
+</body>    
+</html>
