@@ -1,115 +1,96 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background: #fdf7f0;
-  color: #ffffff;
 }
 
-header {
+body {
+  background: #fdf7f0;
+  color: #000000;
+}
+
+.header {
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 100vh;
   color: #ffffff;
+  padding: 1rem 2 rem;
+}
+
+.header-content {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  position: relative;  
 }
 
-h1 {
+.header h1 {
   font-size: 3rem;
-  letter-spacing: 2px;
+  color: #1c211f;
 }
 
-.nav-menu {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
+.search-form {
+  display: flex;;
 }
 
-.nav-menu li {
-  margin-bottom: 1rem;
+.search-form input {
+  padding: 0.5rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px 0 0 4px;
 }
 
-.nav-menu li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-menu li a:hover {
-  color: #ff8c94;
-}
-div { 
-  padding-top: 50px;
-  padding-right: 30px;
-  padding-bottom: 50px;
-  padding-left: 80px;
-}
-
-.sidebar {
-  position: fixed;
-  top: 100px;
-  left: -280px;
-  width: 250px;
-  height: calc(100% - 60px); 
-  background-color: #fff8f5;
-  color: #333333;
-  padding: 2rem 1.5rem;
-  transition: left 0.3s ease;
-  box-shadow: 2px 0 15px #00000026;
-  z-index: 999;
-  overflow-y: auto;
-  border-right: 1px solid #ffdede;
-}
-
-.sidebar.active {
-   max-height: 500px
-}
-
-#close-btn {
-  background: none;
-  color: #ffffff;
+.search-form button {
+  padding: 0.5rem 1rem;
   border: none;
-  font-size: 1.5rem;
+  background-color: #236238;
+  color: #ffffff;
+  border-radius: 4px;
   cursor: pointer;
-  float: right;
+  transition: background-color 0.3s;  
 }
 
-.sidebar ul {
-  list-style: none;
-  margin-top: 3rem;
+.search-form button:hover {
+  background-color: #000000;
 }
 
-.sidebar ul li {
-  margin: 1rem 0;
-}
-
-.sidebar ul li a:hover {
-  color: #ff8c94; 
-} 
-
-.main-banner {
-  background-image: url('images/Portada.jpg');
-  background-size: cover;       /* que la imagen ocupe todo el espacio */
-  background-position: center;  /* centrar la imagen */
-  height: 100vh;                /* altura completa de la pantalla */
+.nav {
   display: flex;
-  flex-direction: column;
-  justify-content: center;      /* centrar verticalmente el texto */
-  align-items: center;          /* centrar horizontalmente */
-  color: white;                 /* texto blanco */
-  text-align: center;
-  padding: 0 2rem;              /* un poco de margen a los lados */
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.main-banner h2 {
-  font-size: 3rem;
+.nav-label {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.nav-label[current="true"] {
+  background-color: #fdf7f0;
+  color: white;
+}
+
+.nav-label:hover {
+  background-color: #ffecec;
+}
+
+main {
+  padding: 2rem
+}
+
+.intro h2 {
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.main-banner p {
-  font-size: 1.2rem;
+.intro p {
+  font-size: 1rem;
+}
+
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }

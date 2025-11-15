@@ -5,46 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="css/stylesunheardWords.css">
+  <link rel="stylesheet" href="css/stylesUnheardWords.css">
   
 </head>
 
 <body>
-  <header>
-    <div>
+  <header class="header">
+    <div class="header-content">
       <h1>Unheard Words</h1>
-
-      <form>
+      <form class="search-form">
         <input type="text" id="global-search" placeholder="Which emotion are you looking for?">
         <button type="submit">Search</button>
       </form>
-      
-      <button id="menu-btn">☰ Menu</button>
     </div>
-  </header>
-
-  <nav id="sidebar" class="sidebar">
-    <button id="close-btn">×</button>
-    <ul class="nav-menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Search by emotion</a></li>
-      <li><a href="#">Photo categories</a></li>
-      <li><a href="#">Inspiration</a></li>
-      <li><a href="#">My favorites</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="que_en_penses.html">Your opinion matters to us</a></li>
-    </ul>
+  <nav class="nav">
+      <div class="nav-label" role="button" current="true"><a href="#">Home</a></div>
+      <div class="nav-label" role="button" current="true"><a href="#">Search by emotion</a></div>
+      <div class="nav-label" role="button" current="true"><a href="#">Photo categories</a></div>
+      <div class="nav-label" role="button" current="true"><a href="#">Inspiration</a></div>
+      <div class="nav-label" role="button" current="true"><a href="#">My favorites</a></div>
+      <div class="nav-label" role="button" current="true"><a href="#">About Us</a></div>
+      <div class="nav-label" role="button" current="true"><a href="que_en_penses.html">Your opinion matters to us</a></div>
   </nav>
+</header>
 
   <main>
-    <div class="main-banner">
+    <section class="intro">
       <img src="images/Portada.jpg" alt="Unheard Words Banner">
       <h2>Welcome to Unheard Words</h2>
       <p> Discover the emotions behind every photograph and the stories they tell. Explore images that capture happiness, sadness, excitement, and more, and let each photo inspire your own journey.</p>
     </div>
   </main>
-
-  
 
   <footer>
     <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
