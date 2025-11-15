@@ -7,7 +7,7 @@
 </head>
 <body>
 <div>
-    <form>
+     <form id="feedbackForm">
         <h2>Your opinion matters to us</h2>
 
         <h3>Personal Information</h3>
@@ -69,24 +69,11 @@
         <br><br>
 
         <button type="submit">Submit</button>
-
         </form>
     </div>
-
 <script>
-const form = document.querySelector('form');
+const form = document.getElementById('feedbackForm');
 const checkboxes = document.querySelectorAll('input[name="type"]');
-
-// Validación de checkboxes: al menos uno debe estar marcado
-form.addEventListener('submit', function(e) {
-    let checked = 0;
-    checkboxes.forEach(cb => { if(cb.checked) checked++; });
-    if(checked === 0) {
-        e.preventDefault(); // Evita enviar el formulario
-        alert('Please select at least one type of photo.');
-    }
-});
-
 const emotionSelect = document.getElementById('emotion');
 const otherInput = document.getElementById('otherEmotion');
 const otherLabel = document.getElementById('otherLabel');
@@ -102,8 +89,19 @@ emotionSelect.addEventListener('change', function() {
         otherInput.required = false;
     }
 });
-</script>
 
+form.addEventListener('submit', function(e) {
+    let checkedCount = 0;
+    checkboxes.forEach(cb => { if(cb.checked) checkedCount++; });
+    if(checkedCount === 0){
+        alert('Please select at least one type of photo.');
+        e.preventDefault();
+        return;
+    }
+    e.preventDefault(); 
+    window.location.href = 'que_en_penses_enviat.html'; 
+});
+</script>
 <a href="unheardWords.html" class="btn-back">← Back to Home</a>
 </body>    
 </html>
