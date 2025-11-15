@@ -63,6 +63,21 @@
     closeBtn.addEventListener('click', () => {
       sidebar.classList.remove('active');
     });
+
+function redirectToConfirmation() {
+    // Validación de checkboxes
+    const checkboxes = document.querySelectorAll('input[name="type"]');
+    let checked = 0;
+    checkboxes.forEach(cb => { if(cb.checked) checked++; });
+    if(checked === 0) {
+        alert('Please select at least one type of photo.');
+        return false; // evita enviar
+    }
+
+    // Redirección a página de confirmación
+    window.location.href = 'que_en_piensas_enviado.html';
+    return false; // evita el envío real
+}    
   </script>
 </body>
 </html>
