@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unheard Words</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/stylesUnheardWords.css">
+  <link rel="stylesheet" href="css/styleHeaderGeneral.css">
+</head>
+
+<body>
+<header class="header">
+  <h1>Unheard Words</h1>
+
+  <form class="search-form">
+    <input type="text" id="global-search" placeholder="Which emotion are you looking for?">
+    <button type="submit">Search</button>
+  </form>
+
+  <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="emotions.html">Search by emotion</a></li>
+        <li><a href="gallery.html">Photo categories</a></li>
+        <li><a href="inspiration.html">Inspiration</a></li>
+        <li><a href="favorits.html">My favorites</a></li>
+        <li><a href="nosaltres.html">About Us</a></li>
+        <li><a href="que_en_penses.html">Your opinion matters to us</a></li>
+      </ul>
+  </nav>
+</header>
+
+  <main>
+    <section>
+      <img src="images/Portada.jpg" alt="Unheard Words Banner">
+      <h2>Welcome to Unheard Words</h2>
+      <p> Discover the emotions behind every photograph and the stories they tell. Explore images that capture happiness, sadness, excitement, and more, and let each photo inspire your own journey.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar'); // ahora coincide con el nav
+    const closeBtn = document.getElementById('close-btn');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+    });
+
+function redirectToConfirmation() {
+    // Validación de checkboxes
+    const checkboxes = document.querySelectorAll('input[name="type"]');
+    let checked = 0;
+    checkboxes.forEach(cb => { if(cb.checked) checked++; });
+    if(checked === 0) {
+        alert('Please select at least one type of photo.');
+        return false; // evita enviar
+    }
+
+    // Redirección a página de confirmación
+    window.location.href = 'que_en_piensas_enviado.html';
+    return false; // evita el envío real
+}    
+  </script>
+</body>
+</html>
