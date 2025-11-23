@@ -4,10 +4,26 @@
     <meta charset="UTF-8" >
     <title>Feedback Emocional</title>   
     <link rel="stylesheet" href="css/stylesForm.css">
+    <link rel="stylesheet" href="css/styleHeaderGeneral.css">
 </head>
-<body>
-<div>
-     <form id="feedbackForm">
+<header class="header">
+    <h1>Unheard Words</h1>
+
+    <nav class="menu">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="emotions.html">Search by emotion</a></li>
+        <li><a href="gallery.html">Photo categories</a></li>
+        <li><a href="inspiration.html">Inspiration</a></li>
+        <li><a href="favorits.html">My favorites</a></li>
+        <li><a href="nosaltres.html">About Us</a></li>
+        <li><a href="que_en_penses.html" current="true">Your opinion matters to us</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <form id="feedbackForm">
         <h2>Your opinion matters to us</h2>
 
         <h3>Personal Information</h3>
@@ -44,7 +60,7 @@
             <option value="anxious">Anxious</option>    
             <option value="excited">Excited</option>
             <option value="bored">Bored</option> 
-            <option value="other">Other</other> 
+            <option value="other">Other</option> 
         </select>
         <br><br>    
 
@@ -54,7 +70,7 @@
 
 
         <h3>Types of photos you're interested in:</h3> 
-        <fieldset id="photoTypes" required>
+        <fieldset id="photoTypes">
             <legend>Choose at least one type:</legend>
             <label><input type="checkbox" name="type" value="landscape" checked>Landscape</label><br> 
             <label><input type="checkbox" name="type" value="urbana">Urbana </label><br> 
@@ -70,7 +86,11 @@
 
         <button type="submit">Submit</button>
         </form>
-    </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
+  </footer>
 <script>
 const form = document.getElementById('feedbackForm');
 const checkboxes = document.querySelectorAll('input[name="type"]');
@@ -102,6 +122,5 @@ form.addEventListener('submit', function(e) {
     window.location.href = 'que_en_penses_enviat.html'; 
 });
 </script>
-<a href="unheardWords.html" class="btn-back">← Back to Home</a>
 </body>    
 </html>

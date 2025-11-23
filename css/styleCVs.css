@@ -1,0 +1,66 @@
+
+.intro-section {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #236238;
+}
+
+.profile-photo figcaption {
+    text-align: center;
+    color: #236238;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.cv-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.cv-table caption {
+    caption-side: top;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cv-table th,
+.cv-table td {
+    border: 1px solid #cfcfcf;
+    padding: 12px;
+}
+
+.cv-table th {
+    background-color: #236238;
+    color: white;
+}
+
+.projects-table {
+    background: #ffffff;
+    padding: 1rem;
+    border-left: 5px solid #236238;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: #236238;
+}
+
+aside ul li {
+    margin-left: 1rem;
+}
+
+

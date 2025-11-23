@@ -1,21 +1,32 @@
-* { 
-    font-family: "Poppins", sans-serif;
-    background-color: #fdf7f0;
-    margin: 0;
-    padding: 0;
+.confirmaion-message {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #333;    
+}
+.successfully-form {
+    color: #236238; 
+    font-size: 1.8em; 
+    margin-bottom: 15px; 
 }
 
-button[type="submit"] {
+.p confirmaion-message {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+.back-btn {
     background-color: #236238;
-    color: white;
-    padding: 15px 40px; 
-    font-size: 1.2em;  
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border: none;
     border-radius: 8px;
-    margin-top: 20px;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
-button[type="submit"]:hover {
-    background-color: #174125; 
-    transform: scale(1.05);     
+.back-btn:hover {
+    background-color: #174125;
+    transform: scale(1.05);
 }

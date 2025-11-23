@@ -4,11 +4,44 @@
     <meta charset="UTF-8">
     <title>Form submitted</title>
     <link rel="stylesheet" href="css/stylesFormSubmitted.css"> 
+    <link rel="stylesheet" href="css/styleHeaderGeneral.css">
 </head>
+
 <body>
-    <h1>Form has been submitted successfully!</h1>
-    <button onclick="window.location.href='unheardWords.html'">
-       ← Go back to Unheard Words
-    </button>
+<header class="header">
+    <h1>Unheard Words</h1>
+
+    <nav class="menu">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="emotions.html">Search by emotion</a></li>
+        <li><a href="gallery.html">Photo categories</a></li>
+        <li><a href="inspiration.html">Inspiration</a></li>
+        <li><a href="favorits.html">My favorites</a></li>
+        <li><a href="nosaltres.html">About Us</a></li>
+        <li><a href="que_en_penses.html" current="true">Your opinion matters to us</a></li>
+        </ul>
+    </nav>
+</header>    
+    
+<main>
+    <div class="confirmation-message">
+        <h2 class="successfully-form">Form has been submitted successfully!</h2>
+       
+        <h3>Thank you for your feedback.</h3>
+        <p> We truly appreciate the time you took to share your thoughts with us.  
+            Your opinion helps us create a better emotional experience through photos.
+        </p>
+
+
+        <button class="back-home" onclick="window.location.href='index.html'">
+            ← Go back to Unheard Words
+        </button>
+    </div>
+</main>    
+<footer>
+    <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
