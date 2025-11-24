@@ -1,3 +1,37 @@
+.header {
+    background-image: url("../images/Portada.jpg");
+    background-size: cover;       
+    background-position: center;   
+    background-repeat: no-repeat;
+    padding: 40px 20px;     
+    color: white;           
+    text-align: center;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000073; 
+    z-index: 0;
+}
+
+.header * {
+    position: relative;
+    z-index: 1;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-shadow: 0 0 8px #000000cc;
+}
+
 .search-form {
   display: flex;
   justify-content: center;
@@ -32,3 +66,110 @@
   font-size: 1rem;
 }
 
+.preview-gallery {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.gallery-flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery-flex figure {
+    width: 200px;
+    text-align: center;
+}
+
+.gallery-flex img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.hero-section {
+  background-image: url("../images/portada_index.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 75vh;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #0000004d;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+.under-banner {
+  position: relative;
+  width: 100%;
+  height: 400px; 
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.under-banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.under-banner-content {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: white;
+  background-color: #00000066; 
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.under-banner-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner-label span {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffdf00;
+}
+
+.banner-button {
+  display: inline-block;
+  background-color: #236238;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.banner-button:hover {
+  background-color: #000000;
+}

@@ -1,0 +1,32 @@
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.photo-card {
+    position: relative;
+}
+
+.photo-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.photo-card button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #ffffffcc;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.photo-card button:hover {
+    background: #ffebeb;
+    transform: scale(1.05);
+}
