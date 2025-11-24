@@ -16,10 +16,11 @@
     </div>
   </section>
 
-  <form class="search-form">
-    <input type="text" id="global-search" placeholder="Which emotion are you looking for?">
-    <button type="submit">Search</button>
+  <form class="search-form" onsubmit="return searchEmotion()">
+  <input type="text" id="global-search" placeholder="Which emotion are you looking for?">
+  <button type="submit">Search</button>
   </form>
+
 
   <nav class="menu">
       <ul>
@@ -49,9 +50,10 @@
 
       <h5>Why emotions matter</h5>
       <p>Photography is more than light and composition—it's a reflection of our emotional world.</p>
-
-      <h6>Let the journey begin</h6>
-      <p>Scroll down and discover a preview of the images you will find throughout the website.</p>
+    <section class="features">
+      <div class="feature">
+        <h3>Diverse Emotions</h3>
+        <p>From joy to melancholy, explore a wide range of human emotions captured through the lens.</p>
     </section>
 
     <section class="under-banner">
@@ -95,32 +97,17 @@
 
 
   <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const sidebar = document.getElementById('sidebar'); // ahora coincide con el nav
-    const closeBtn = document.getElementById('close-btn');
-
-    menuBtn.addEventListener('click', () => {
-      sidebar.classList.add('active');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.remove('active');
-    });
-
-function redirectToConfirmation() {
-    // Validación de checkboxes
-    const checkboxes = document.querySelectorAll('input[name="type"]');
-    let checked = 0;
-    checkboxes.forEach(cb => { if(cb.checked) checked++; });
-    if(checked === 0) {
-        alert('Please select at least one type of photo.');
-        return false; // evita enviar
+function searchEmotion() {
+    const query = document.getElementById('global-search').value.trim().toLowerCase();
+    if (!query) {
+        alert('Please enter an emotion to search.');
+        return false;
     }
 
-    // Redirección a página de confirmación
-    window.location.href = 'que_en_piensas_enviado.html';
-    return false; // evita el envío real
-}    
-  </script>
+    window.location.href = `emotions.html?emotion=${encodeURIComponent(query)}`;
+    return false;
+}
+</script>
+
 </body>
 </html>
