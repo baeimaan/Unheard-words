@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search by Emotion - Unheard Words</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/stylesUnheardWords.css">
+  <link rel="stylesheet" href="css/styleHeaderGeneral.css">
+</head>
+
+<body>
+<header class="header">
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Search by Emotion</h1>
+      <p>Find photos that match your feelings</p>
+    </div>
+  </section>
+
+  <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="emotions.html" class="current">Search by emotion</a></li>
+        <li><a href="gallery.html">Photo categories</a></li>
+        <li><a href="inspiration.html">Inspiration</a></li>
+        <li><a href="favorits.html">My favorites</a></li>
+        <li><a href="nosaltres.html">About Us</a></li>
+        <li><a href="que_en_penses.html">Your opinion matters to us</a></li>
+      </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="emotion-search">
+    <h2>Filter photos by emotion</h2>
+    <label for="emotion-filter">Select an emotion:</label>
+    <select id="emotion-filter">
+        <option value="">All emotions</option>
+        <option value="peace">Peace</option>
+        <option value="silence">Silence</option>
+        <option value="anxiety">Anxiety</option>
+        <option value="joy">Joy</option>
+        <option value="happiness">Happiness</option>
+        <option value="sadness">Sadness</option>
+    </select>
+  </section>
+
+  <section class="preview-gallery">
+    <h3>Photo gallery</h3>
+    <div class="gallery-flex" id="emotion-gallery">
+        <figure data-emotion="peace">
+            <img src="images/land4.jpg" alt="Peaceful moment">
+            <figcaption>Peaceful moment</figcaption>
+        </figure>
+
+        <figure data-emotion="silence">
+            <img src="images/portrait.jpg" alt="Silence">
+            <figcaption>Strength in silence</figcaption>
+        </figure>
+
+        <figure data-emotion="anxiety">
+            <img src="images/portrait7.jpg" alt="Anxious">
+            <figcaption>Hidden emotions</figcaption>
+        </figure>
+
+        <figure data-emotion="joy,happiness">
+            <img src="images/portrait8.jpg" alt="Joyful light">
+            <figcaption>Joyful light</figcaption>
+        </figure>
+
+        <figure data-emotion="sadness">
+            <img src="images/portrait9.jpg" alt="Sad moment">
+            <figcaption>Quiet sadness</figcaption>
+        </figure>
+    </div>
+  </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
+</footer>
+
+<script>
+const filter = document.getElementById('emotion-filter');
+const gallery = document.getElementById('emotion-gallery');
+const figures = gallery.querySelectorAll('figure');
+
+function filterPhotos(emotion) {
+    figures.forEach(fig => {
+        const emotions = fig.dataset.emotion.split(',');
+        if (!emotion || emotions.includes(emotion)) {
+            fig.style.display = 'block';
+        } else {
+            fig.style.display = 'none';
+        }
+    });
+}
+
+filter.addEventListener('change', () => {
+    filterPhotos(filter.value);
+});
+
+function getEmotionFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('emotion');
+}
+
+const initialEmotion = getEmotionFromURL();
+if (initialEmotion) {
+    filter.value = initialEmotion;
+    filterPhotos(initialEmotion);
+}
+</script>
+</body>
+</html>

@@ -3,6 +3,9 @@
 <head>
   <title>Unheard Words</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/stylesUnheardWords.css">
   <link rel="stylesheet" href="css/styleHeaderGeneral.css">
 </head>
@@ -16,7 +19,7 @@
     </div>
   </section>
 
-  <form class="search-form">
+  <form class="search-form" onsubmit="return searchEmotion()">
     <input type="text" id="global-search" placeholder="Which emotion are you looking for?">
     <button type="submit">Search</button>
   </form>
@@ -34,93 +37,72 @@
   </nav>
 </header>
 
-  <main>
+<main>
 
-    <div class="intro">
-      <h2>Welcome to Unheard Words</h2>
-      <p> Discover the emotions behind every photograph and the stories they tell. Explore images that capture happiness, sadness, excitement, and more, and let each photo inspire your own journey.</p>
+  <div class="intro">
+    <h2>Welcome to Unheard Words</h2>
+    <p>Discover the emotions behind every photograph and the stories they tell. Explore images that capture happiness, sadness, excitement, and more, and let each photo inspire your own journey.</p>
+  </div>
+
+  <h3>What you will find here</h3>
+  <p>Explore images that reflect the beauty, chaos, joy and mystery of the human experience.</p>
+
+  <h4>Feelings behind every photo</h4>
+  <p>Our pictures are organized by emotions so you can navigate through them depending on how you feel or how you want to feel.</p>
+
+  <h5>Why emotions matter</h5>
+  <p>Photography is more than light and composition—it's a reflection of our emotional world.</p>
+
+  <section class="under-banner">
+    <div class="under-banner-img">
+      <img src="images/land1.jpg" alt="Banner emociones" />
     </div>
-      
-      <h3>What you will find here</h3>
-      <p>Explore images that reflect the beauty, chaos, joy and mystery of the human experience.</p>
+  </section>
 
-      <h4>Feelings behind every photo</h4>
-      <p>Our pictures are organized by emotions so you can navigate through them depending on how you feel or how you want to feel.</p>
+  <section class="preview-gallery">
+    <h3>Photo preview</h3>
 
-      <h5>Why emotions matter</h5>
-      <p>Photography is more than light and composition—it's a reflection of our emotional world.</p>
+    <div class="gallery-flex">
+      <figure>
+        <img src="images/land4.jpg" alt="Peaceful moment">
+        <figcaption>Peaceful moment</figcaption>
+      </figure>
 
-      <h6>Let the journey begin</h6>
-      <p>Scroll down and discover a preview of the images you will find throughout the website.</p>
-    </section>
+      <figure>
+        <img src="images/portrait.jpg" alt="Silence">
+        <figcaption>Strength in silence</figcaption>
+      </figure>
 
-    <section class="under-banner">
-      <div class="under-banner-img">
-        <img src="images/land1.jpg" alt="Banner emociones" />
-      </div>
-      
-      
-    </section>
-    <section class="preview-gallery">
-        <h3>Photo preview</h3>
+      <figure>
+        <img src="images/portrait7.jpg" alt="Anxious">
+        <figcaption>Hidden emotions</figcaption>
+      </figure>
 
-        <div class="gallery-flex">
-            <figure>
-                <img src="images/land4.jpg" alt="Peaceful moment">
-                <figcaption>Peaceful moment</figcaption>
-            </figure>
+      <figure>
+        <img src="images/portrait8.jpg" alt="Joyful light">
+        <figcaption>Joyful light</figcaption>
+      </figure>
+    </div>
+  </section>
 
-            <figure>
-                <img src="images/portrait.jpg" alt="Silence">
-                <figcaption>Strength in silence</figcaption>
-            </figure>
+</main>
 
-            <figure>
-                <img src="images/portrait7.jpg" alt="Anxious">
-                <figcaption>Hidden emotions</figcaption>
-            </figure>
+<footer>
+  <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
+</footer>
 
-            <figure>
-                <img src="images/portrait8.jpg" alt="Joyful light">
-                <figcaption>Joyful light</figcaption>
-            </figure>
-        </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
-  </footer>
-
-
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const sidebar = document.getElementById('sidebar'); // ahora coincide con el nav
-    const closeBtn = document.getElementById('close-btn');
-
-    menuBtn.addEventListener('click', () => {
-      sidebar.classList.add('active');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.remove('active');
-    });
-
-function redirectToConfirmation() {
-    // Validación de checkboxes
-    const checkboxes = document.querySelectorAll('input[name="type"]');
-    let checked = 0;
-    checkboxes.forEach(cb => { if(cb.checked) checked++; });
-    if(checked === 0) {
-        alert('Please select at least one type of photo.');
-        return false; // evita enviar
+<script>
+function searchEmotion() {
+    const query = document.getElementById('global-search').value.trim().toLowerCase();
+    if (!query) {
+        alert('Please enter an emotion to search.');
+        return false;
     }
 
-    // Redirección a página de confirmación
-    window.location.href = 'que_en_piensas_enviado.html';
-    return false; // evita el envío real
-}    
-  </script>
+    window.location.href = `emotions.html?emotion=${encodeURIComponent(query)}`;
+    return false;
+}
+</script>
+
 </body>
 </html>
