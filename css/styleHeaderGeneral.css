@@ -1,3 +1,228 @@
+body, p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #111;
+    margin: 0.5em 0;
+    letter-spacing: 0.5px;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    text-shadow: 0 0 8px #000000cc;
+}
+
+button, .banner-button, .menu a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header {
+    background-image: url("../images/Portada.jpg");
+    background-size: cover;       
+    background-position: center;   
+    background-repeat: no-repeat;
+    padding: 40px 20px;     
+    color: white;           
+    text-align: center;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000073;
+    z-index: 0;
+}
+
+.header * {
+    position: relative;
+    z-index: 1;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-shadow: 0 0 8px #000000cc;
+}
+
+.hero-section {
+    background-image: url("../images/portada_index.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 75vh;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #0000004d;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+}
+
+.search-form input {
+    padding: 0.5rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px 0 0 4px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #236238;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search-form button:hover {
+    background-color: #000000;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 1rem;
+}
+
+.features .feature h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.under-banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.under-banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.under-banner-content {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: white;
+    background-color: #00000066;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+}
+
+.under-banner-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.banner-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.banner-label span {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ffdf00;
+}
+
+.banner-button {
+    display: inline-block;
+    background-color: #236238;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.banner-button:hover {
+    background-color: #000000;
+}
+
+.preview-gallery {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.gallery-flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery-flex figure {
+    width: 200px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.gallery-flex img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+
+
+
 * {
   margin: 0;
   padding: 0;
