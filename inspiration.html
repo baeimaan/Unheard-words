@@ -5,6 +5,13 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/stylesInspiration.css">
   <link rel="stylesheet" href="css/styleHeaderGeneral.css">
+<   <style>
+        .favorited {
+            background-color: #ffcccc;
+            color: red;
+            font-weight: bold;
+        }
+        </style>
 </head>
 
 <body>
@@ -27,6 +34,7 @@
     <h2>Inspiration</h2>
     <p>A collection of all the images on the website.</p>
     <div class="gallery-grid">
+        
         <div class="photo-card">
             <img src="images/land1.jpg">
             <button onclick="addFavorite('land1.jpg')">❤ Add to favorites</button>
@@ -112,5 +120,30 @@
 <footer>
     <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
 </footer>
+<script>
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];    
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.photo-card').forEach(card => {
+          const img = card.querySelector('img').getAttribute('src').split('/').pop();
+          const button = card.querySelector('button');
+          if (favorites.includes(img)) {
+              button.textContent = '❤️ Favorited';
+              button.classList.add('favorited');
+          }
+      });
+  });
+
+    function addFavorite(imgName) {
+      let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+      if (!favorites.includes(imgName)) {
+          favorites.push(imgName);
+          localStorage.setItem('favorites', JSON.stringify(favorites));
+          alert('Added to favorites!');
+      } else {
+          alert('Already in favorites!');
+      }
+  }
+</script>
+
 </body>
 </html>
