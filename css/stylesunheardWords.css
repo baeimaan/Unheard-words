@@ -102,7 +102,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .feature-section {
-    background-color: #ffe5e5;
+    background-color: #e2a37ec3;
     padding: 100px 20px;
     overflow: hidden;
     position: relative;
@@ -110,7 +110,10 @@ h2, h3, h4, h5, h6 {
 }
 
 .second-feature {
-    background-color: #ecdeff88;
+    background-color: #d68383c5;
+}
+.third-feature {
+    background-color: #3e6341c8;
 }
 
 .feature-container {
