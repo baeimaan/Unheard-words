@@ -57,27 +57,30 @@
   </section>
 
   <section class="feature-section">
-  <h2>Combining true emotions & an editorial style to create timeless + bold imagery.</h2>
-  
-  <div class="feature-grid">
-    <div class="feature-item">
-      <img src="images/feature1.jpg" alt="Feature 1">
-      <p>Description 1</p>
-    </div>
-    <div class="feature-item">
-      <img src="images/feature2.jpg" alt="Feature 2">
-      <p>Description 2</p>
-    </div>
-    <div class="feature-item">
-      <img src="images/feature3.jpg" alt="Feature 3">
-      <p>Description 3</p>
-    </div>
-    <div class="feature-item">
-      <img src="images/feature4.jpg" alt="Feature 4">
-      <p>Description 4</p>
+  <div class="feature-container">
+    <h2>Combining true emotions & an editorial style to create timeless + bold imagery.</h2>
+    
+    <div class="feature-grid">
+      <div class="feature-item">
+        <img src="images/index/escapism.jpg" alt="Escapism">
+        <p>A captivating moment captured in Escapism</p>
+      </div>
+      <div class="feature-item">
+        <img src="images/index/numbness.jpg" alt="Numbness photo">
+        <p>A frozen emotion, captured in Numbness</p>
+      </div>
+      <div class="feature-item">
+        <img src="images/index/yearning.jpg" alt="Yearning photo">
+        <p>The ache of longing expressed in Yearning</p>
+      </div>
+      <div class="feature-item">
+        <img src="images/index/toFeel.jpg" alt="ToFeel photo">
+        <p>The art of sensing through touch</p>
+      </div>
     </div>
   </div>
 </section>
+
 
   <section class="preview-gallery">
     <h3>Photo preview</h3>
@@ -124,15 +127,21 @@ function searchEmotion() {
 }
 </script>
 
+</body>
 <script>
+const featureSection = document.querySelector('.feature-section');
 const items = document.querySelectorAll('.feature-item');
 
 window.addEventListener('scroll', () => {
-  const triggerBottom = window.innerHeight * 0.8;
+  const scrollY = window.scrollY;
 
+  // Parallax movimiento del bloque completo
+  featureSection.style.transform = `translateY(${scrollY * -0.2}px)`;
+
+  // Fade-in de cada imagen
+  const triggerBottom = window.innerHeight * 0.8;
   items.forEach(item => {
     const itemTop = item.getBoundingClientRect().top;
-
     if(itemTop < triggerBottom){
       item.classList.add('show');
     }
@@ -140,5 +149,5 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
-</body>
+
 </html>
