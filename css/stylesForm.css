@@ -1,5 +1,36 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/en_que_penses/natura1.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-width: 100vh;
+}
+
+
+.form-section {
+    background-color:#fce7b1;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15 px #00000033;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-section * {
+    position: relative;
+    z-index: 1;
+}
 input, select, textarea {
     font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -22,11 +53,12 @@ label {
 }
 
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
-select,
-textarea {
+#text,
+#email,
+#age,
+#otherEmotion,
+#comments,
+#emotion {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -36,6 +68,41 @@ textarea {
     box-sizing: border-box;
 }
 
+fieldset {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+fieldset .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+} 
+
+fieldset .options label {
+    flex: 1 1 45%;
+    border: 1px solid #cccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+}
+
+fieldset .options input[type="checkbox"] {
+    display: none;
+}
+
+fieldset .options input[type="checkbox"]:checked + span {
+    background-color: #236238;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
 
 button[type="submit"] {
     background-color: #236238;
