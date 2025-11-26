@@ -36,48 +36,78 @@
 
 <main>
 
-  <div class="intro">
-    <h2>Welcome to Unheard Words</h2>
-    <p>Discover the emotions behind every photograph and the stories they tell. Explore images that capture happiness, sadness, excitement, and more, and let each photo inspire your own journey.</p>
-  </div>
-
-  <h3>What you will find here</h3>
-  <p>Explore images that reflect the beauty, chaos, joy and mystery of the human experience.</p>
-
-  <h4>Feelings behind every photo</h4>
-  <p>Our pictures are organized by emotions so you can navigate through them depending on how you feel or how you want to feel.</p>
-
-  <h5>Why emotions matter</h5>
-  <p>Photography is more than light and composition—it's a reflection of our emotional world.</p>
-
-  <section class="under-banner">
-    <div class="under-banner-img">
-      <img src="images/land1.jpg" alt="Banner emociones" />
+  <section class="intro-section">
+    <div class="intro-wrapper">
+      <h1>Welcome to Unheard Words</h1>
+      <p class="intro-subtitle">Discover the emotions behind every photograph and the stories they tell.</p>
+      <p class="intro-description">Explore images that capture happiness, sadness, excitement, and more, and let each photo inspire your own journey.</p>
+      
+      <div class="intro-features">
+        <div class="feature-block">
+          <h2>What you will find here</h2>
+          <p>Explore images that reflect the beauty, chaos, joy and mystery of the human experience.</p>
+        </div>
+        <div class="feature-block">
+          <h2>Feelings behind every photo</h2>
+          <p>Our pictures are organized by emotions so you can navigate depending on how you feel or how you want to feel.</p>
+        </div>
+        <div class="feature-block">
+          <h2>Why emotions matter</h2>
+          <p>Photography is more than light and composition—it's a reflection of our emotional world.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="feature-section">
-  <h2>Combining true emotions & an editorial style to create timeless + bold imagery.</h2>
-  
-  <div class="feature-grid">
-    <div class="feature-item">
-      <img src="images/feature1.jpg" alt="Feature 1">
-      <p>Description 1</p>
+    <div class="feature-container">
+      <h2>Combining true emotions & an editorial style to create timeless + bold imagery.</h2>
+      
+      <div class="feature-grid">
+        <div class="feature-item">
+          <img src="images/index/escapism.jpg" alt="Escapism">
+          <p>A captivating moment captured in Escapism</p>
+        </div>
+        <div class="feature-item">
+          <img src="images/index/numbness.jpg" alt="Numbness photo">
+          <p>A frozen emotion, captured in Numbness</p>
+        </div>
+        <div class="feature-item">
+          <img src="images/index/yearning.jpg" alt="Yearning photo">
+          <p>The ache of longing expressed in Yearning</p>
+        </div>
+        <div class="feature-item">
+          <img src="images/index/toFeel.jpg" alt="ToFeel photo">
+          <p>The art of sensing through touch</p>
+        </div>
+      </div>
     </div>
-    <div class="feature-item">
-      <img src="images/feature2.jpg" alt="Feature 2">
-      <p>Description 2</p>
+  </section>
+
+  <section class="feature-section second-feature">
+    <div class="feature-container">
+      <h2>Exploring deeper emotions through evocative visuals</h2>
+      
+      <div class="feature-grid">
+        <div class="feature-item">
+          <img src="images/index2/lingeringGaze.jpg" alt="Lingering Gaze photo">
+          <p>The art of staying in someone's eyes a second too long</p>
+        </div>
+        <div class="feature-item">
+          <img src="images/index2/sadness.jpg" alt="Sadness photo">
+          <p>The quiet of hidden sadness</p>
+        </div>
+        <div class="feature-item">
+          <img src="images/index2/kintsugiEmotions.jpg" alt="Kintsugi emotions photo">
+          <p>The art of carrying your scars like treasure</p>
+        </div>
+        <div class="feature-item">
+          <img src="images/index2/kora.jpg" alt="Kora photo">
+          <p>The art of wrapping yourself in silence</p>
+        </div>
+      </div>
     </div>
-    <div class="feature-item">
-      <img src="images/feature3.jpg" alt="Feature 3">
-      <p>Description 3</p>
-    </div>
-    <div class="feature-item">
-      <img src="images/feature4.jpg" alt="Feature 4">
-      <p>Description 4</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section class="preview-gallery">
     <h3>Photo preview</h3>
@@ -125,14 +155,18 @@ function searchEmotion() {
 </script>
 
 <script>
+const featureSections = document.querySelectorAll('.feature-section');
 const items = document.querySelectorAll('.feature-item');
 
 window.addEventListener('scroll', () => {
-  const triggerBottom = window.innerHeight * 0.8;
+  const scrollY = window.scrollY;
 
+  featureSections.forEach(section => {
+    section.style.transform = `translateY(${scrollY * -0.2}px)`;
+  });
+  const triggerBottom = window.innerHeight * 0.8;
   items.forEach(item => {
     const itemTop = item.getBoundingClientRect().top;
-
     if(itemTop < triggerBottom){
       item.classList.add('show');
     }
