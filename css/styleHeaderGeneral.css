@@ -34,7 +34,7 @@ button, .banner-button, .menu a {
 }
 
 .header {
-    background-image: url("../images/Portada.jpg");
+    background-image: url("../images/index/portada.jpeg");
     background-size: cover;       
     background-position: center;   
     background-repeat: no-repeat;
