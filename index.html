@@ -5,25 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/stylesUnheardWords.css">
   <link rel="stylesheet" href="css/styleHeaderGeneral.css">
 </head>
 
 <body>
 <header class="header">
-  <section class="hero-section">
-    <div class="hero-content">
-      <h1>Unheard Words</h1>
-      <p>Discover the emotions behind every photograph</p>
-    </div>
-  </section>
-
-  <form class="search-form" onsubmit="return searchEmotion()">
-    <input type="text" id="global-search" placeholder="Which emotion are you looking for?">
-    <button type="submit">Search</button>
-  </form>
-
+  <div class="hero-content">
+    <h1>Unheard Words</h1>
+    <p>Discover the emotions behind every photograph</p>
+  </div>
+  <div class="search-container">
+    <form class="search-form" onsubmit="return searchEmotion()">
+      <input type="text" id="global-search" placeholder="Which emotion are you looking for?">
+      <button type="submit">Search</button>
+    </form>
+  </div>
   <nav class="menu">
       <ul>
         <li><a href="index.html" class="current">Home</a></li>

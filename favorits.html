@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Favorites</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/stylesInspiration.css">
+  <link rel="stylesheet" href="css/styleHeaderGeneral.css">
+</head>
+
+<body>
+<header class="header">
+  <h1>Unheard Words</h1>
+
+  <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="emotions.html">Search by emotion</a></li>
+        <li><a href="gallery.html">Photo categories</a></li>
+        <li><a href="inspiration.html">Inspiration</a></li>
+        <li><a href="favorits.html" class="current">My favorites</a></li>
+        <li><a href="nosaltres.html">About Us</a></li>
+        <li><a href="que_en_penses.html">Your opinion matters to us</a></li>
+      </ul>
+  </nav>
+</header>
+
+<main class="favorites-main">
+    <h2>My Favorites</h2>
+    <p>Here are all the images you have liked.</p>
+    <div class="gallery-grid" id="favoritesGrid">
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
+</footer>
+
+<script>
+  const favoritesGrid = document.getElementById('favoritesGrid');
+  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+  favorites.forEach(img => {
+      const div = document.createElement('div');
+      div.className = 'photo-card';
+      div.innerHTML = `
+          <img src="images/${img}" alt="Favorite photo">
+          <button onclick="removeFavorite('${img}')">❌ Remove</button>
+      `;
+      favoritesGrid.appendChild(div);
+  });
+
+  function removeFavorite(imgName) {
+      const updatedFavorites = favorites.filter(img => img !== imgName);
+      localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+      location.reload();
+  }
+</script>
+</body>
+</html>
