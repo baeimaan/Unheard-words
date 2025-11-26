@@ -52,7 +52,7 @@
 
   <section class="under-banner">
     <div class="under-banner-img">
-      <img src="images/land1.jpg" alt="Banner emociones" />
+      <img src="images/portrait.jpg" alt="Banner emociones" />
     </div>
   </section>
 
@@ -81,6 +81,30 @@
   </div>
 </section>
 
+<section class="feature-section second-feature">
+  <div class="feature-container">
+    <h2>Exploring deeper emotions through evocative visuals</h2>
+    
+    <div class="feature-grid">
+      <div class="feature-item">
+        <img src="images/index2/lingeringGaze.jpg" alt="Lingering Gaze photo">
+        <p>The art of staying in someone's eyes a second too long</p>
+      </div>
+      <div class="feature-item">
+        <img src="images/index2/sadness.jpg" alt="Sadness photo">
+        <p>The quiet of hidden sadness</p>
+      </div>
+      <div class="feature-item">
+        <img src="images/index2/kintsugiEmotions.jpg" alt="Kintsugi emotions photo">
+        <p>The art of carrying your scars like treasure</p>
+      </div>
+      <div class="feature-item">
+        <img src="images/index2/kora.jpg" alt="Kora photo">
+        <p>The art of wrapping yourself in silence</p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <section class="preview-gallery">
     <h3>Photo preview</h3>
@@ -134,11 +158,7 @@ const items = document.querySelectorAll('.feature-item');
 
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
-
-  // Parallax movimiento del bloque completo
   featureSection.style.transform = `translateY(${scrollY * -0.2}px)`;
-
-  // Fade-in de cada imagen
   const triggerBottom = window.innerHeight * 0.8;
   items.forEach(item => {
     const itemTop = item.getBoundingClientRect().top;
@@ -148,6 +168,5 @@ window.addEventListener('scroll', () => {
   });
 });
 </script>
-
 
 </html>
