@@ -56,6 +56,29 @@
     </div>
   </section>
 
+  <section class="feature-section">
+  <h2>Combining true emotions & an editorial style to create timeless + bold imagery.</h2>
+  
+  <div class="feature-grid">
+    <div class="feature-item">
+      <img src="images/feature1.jpg" alt="Feature 1">
+      <p>Description 1</p>
+    </div>
+    <div class="feature-item">
+      <img src="images/feature2.jpg" alt="Feature 2">
+      <p>Description 2</p>
+    </div>
+    <div class="feature-item">
+      <img src="images/feature3.jpg" alt="Feature 3">
+      <p>Description 3</p>
+    </div>
+    <div class="feature-item">
+      <img src="images/feature4.jpg" alt="Feature 4">
+      <p>Description 4</p>
+    </div>
+  </div>
+</section>
+
   <section class="preview-gallery">
     <h3>Photo preview</h3>
 
@@ -99,6 +122,22 @@ function searchEmotion() {
     window.location.href = `emotions.html?emotion=${encodeURIComponent(query)}`;
     return false;
 }
+</script>
+
+<script>
+const items = document.querySelectorAll('.feature-item');
+
+window.addEventListener('scroll', () => {
+  const triggerBottom = window.innerHeight * 0.8;
+
+  items.forEach(item => {
+    const itemTop = item.getBoundingClientRect().top;
+
+    if(itemTop < triggerBottom){
+      item.classList.add('show');
+    }
+  });
+});
 </script>
 
 </body>
