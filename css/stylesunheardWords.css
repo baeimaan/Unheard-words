@@ -6,6 +6,24 @@ h2, h3, h4, h5, h6 {
     letter-spacing: 0.5px;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .search-section {
     text-align: center;
     margin-top: 1.5rem;
@@ -60,7 +78,6 @@ h2, h3, h4, h5, h6 {
     color: #0a1d4d;
 }
 
-
 .intro-subtitle {
     font-size: 1.5rem;
     font-weight: 400;
@@ -102,7 +119,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .feature-section {
-    background-color: #e2a37ec3;
+    background-color: #335437c3;
     padding: 100px 20px;
     overflow: hidden;
     position: relative;
@@ -110,8 +127,9 @@ h2, h3, h4, h5, h6 {
 }
 
 .second-feature {
-    background-color: #d68383c5;
+    background-color: #9f6e3abf;
 }
+
 .third-feature {
     background-color: #3e6341c8;
 }
@@ -143,7 +161,7 @@ h2, h3, h4, h5, h6 {
 
 .feature-item p {
     margin-top: 10px;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #333;
     font-size: 1rem;
@@ -158,6 +176,17 @@ h2, h3, h4, h5, h6 {
 
 .feature-item.show {
     opacity: 1;
+    transform: translateY(0);
+}
+.feature-section.emotions-feature {
+    background-color: #f09fd1;
+    padding: 100px 20px;
+    overflow: hidden;
+    transform: translateY(50px);
+    transition: transform 0.8s ease-out;
+}
+
+.feature-section.emotions-feature.show-section {
     transform: translateY(0);
 }
 
@@ -185,38 +214,13 @@ h2, h3, h4, h5, h6 {
     height: auto;
     border-radius: 10px;
 }
+
 .under-banner-img img {
     width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    color: #111;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .menu ul {
@@ -238,4 +242,13 @@ ul {
 .menu li a.current,
 .menu li a:hover {
     color: #236238;
+}
+
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
 }
