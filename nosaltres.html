@@ -5,6 +5,95 @@
 <head>
     <meta charset="UTF-8">
     <title>About Us - Unheard Words</title>
+    <style>
+        
+        nav menu ul {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        nav menu ul li a {
+            color: white;
+            font-weight: 500;
+        }
+
+        main {
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: center;
+        }
+        .team {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .team h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #236238;
+        }
+
+        .member {
+            display: flex;
+            align-items: center;
+            background-color: #fff8e1;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px #0000001a;
+        }
+        .member-right {
+            flex-direction: row-reverse;
+            display: flex;
+            align-items: center;
+            background-color: #fff8e1;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px #0000001a;
+            
+        }
+
+        .member-right .member-info {
+            text-align: right;
+        }
+        .member img {
+            width: 120px;
+            height: 120px;
+            padding: 5px;
+            margin: 5px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .member-right img {
+            margin: 0 0 0 20px;
+        }
+
+        .member h3 {
+            margin: 0 0 10px 0;
+            color: #444;
+        }
+
+        .member p {
+            margin: 0 0 10px 0;
+            line-height: 1.5;
+        }
+
+        .member a.cv-link {
+            display: inline-block;
+            background-color: #236238;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .member a.cv-link:hover {
+            background-color: #174125;
+        }
+    </style>
     <link rel="stylesheet" href="css/styleHeaderGeneral.css">
     <link rel="stylesheet" href="css/stylesNosaltres.css">
 </head>
@@ -30,16 +119,21 @@
         <h2>Meet the Team</h2>
 
         <div class="member">
+            <img src="images/nosaltres/jessica_rodriguez.JPG" alt="Jessica Rodríguez Rey" class="member-photo">
+            <div class="member-info">
             <h3>Jessica Rodríguez Rey</h3>
             <p>Multiplatform Application Development student with experience in customer service, bilingual support, and applied chemistry. Interested in web development and UX design.</p>
-            <a href="curriculumJessica.html" class="cv-link">View CV</a>
+            <a href="curriculumJessica.html" class="cv-link" target="_blank">View CV</a>
+            </div>
         </div>
 
-        <div class="member">
+        <div class="member member-right">
+            <img src="images/nosaltres/imaan_javaid.JPG" alt="Imaan Javaid" class="member-photo">
+            <div class="member-info">
             <h3>Imaan Javaid Sharif</h3>
             <p>DAM student, professional cricket player, and multilingual coach with leadership experience in volunteering and sports. Certified in first aid, ropec, and sports instruction. Fast learner, adaptable, and motivated in practical, hands-on tasks.</p>
-            <a href="curriculumImaan.html" class="cv-link">View CV</a>
-
+            <a href="curriculumImaan.html" class="cv-link" target="_blank">View CV</a>
+        </div>        
     </section>
 </main>
 
