@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 <head>
   <title>Search by Emotion - Unheard Words</title>
   <meta charset="UTF-8">
@@ -44,34 +46,34 @@
     </select>
   </section>
 
-  <section class="preview-gallery">
-    <h3>Photo gallery</h3>
-    <div class="gallery-flex" id="emotion-gallery">
-        <figure data-emotion="peace">
-            <img src="images/land4.jpg" alt="Peaceful moment">
-            <figcaption>Peaceful moment</figcaption>
-        </figure>
+  <section class="feature-section" id="emotion-feature">
+      <div class="feature-container">
+          <h2>Photo gallery</h2>
 
-        <figure data-emotion="silence">
-            <img src="images/portrait.jpg" alt="Silence">
-            <figcaption>Strength in silence</figcaption>
-        </figure>
+          <div class="feature-grid" id="emotion-gallery">
+              
+              <div class="feature-item" data-emotion="peace">
+                  <img src="images/land4.jpg" alt="Peaceful moment">
+                  <p>Peaceful moment</p>
+              </div>
 
-        <figure data-emotion="anxiety">
-            <img src="images/portrait7.jpg" alt="Anxious">
-            <figcaption>Hidden emotions</figcaption>
-        </figure>
+              <div class="feature-item" data-emotion="anxiety">
+                  <img src="images/portrait7.jpg" alt="Anxious">
+                  <p>Hidden emotions</p>
+              </div>
 
-        <figure data-emotion="joy,happiness">
-            <img src="images/portrait8.jpg" alt="Joyful light">
-            <figcaption>Joyful light</figcaption>
-        </figure>
+              <div class="feature-item" data-emotion="joy,happiness">
+                  <img src="images/portrait8.jpg" alt="Joyful light">
+                  <p>Joyful light</p>
+              </div>
 
-        <figure data-emotion="sadness">
-            <img src="images/portrait9.jpg" alt="Sad moment">
-            <figcaption>Quiet sadness</figcaption>
-        </figure>
-    </div>
+              <div class="feature-item" data-emotion="sadness">
+                  <img src="images/index2/sadness.jpg" alt="Sad moment">
+                  <p>Quiet sadness</p>
+              </div>
+
+          </div>
+      </div>
   </section>
 </main>
 
@@ -82,15 +84,15 @@
 <script>
 const filter = document.getElementById('emotion-filter');
 const gallery = document.getElementById('emotion-gallery');
-const figures = gallery.querySelectorAll('figure');
+const items = gallery.querySelectorAll('.feature-item');
 
 function filterPhotos(emotion) {
-    figures.forEach(fig => {
-        const emotions = fig.dataset.emotion.split(',');
+    items.forEach(item => {
+        const emotions = item.dataset.emotion.split(',');
         if (!emotion || emotions.includes(emotion)) {
-            fig.style.display = 'block';
+            item.style.display = 'block';
         } else {
-            fig.style.display = 'none';
+            item.style.display = 'none';
         }
     });
 }
@@ -109,6 +111,27 @@ if (initialEmotion) {
     filter.value = initialEmotion;
     filterPhotos(initialEmotion);
 }
+
+const section = document.querySelector('.feature-section');
+const featureItems = document.querySelectorAll('.feature-item');
+
+function checkScroll() {
+    const trigger = window.innerHeight * 0.85;
+
+    if (section.getBoundingClientRect().top < trigger) {
+        section.classList.add("show-section");
+    }
+
+    featureItems.forEach(item => {
+        if (item.getBoundingClientRect().top < trigger) {
+            item.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", checkScroll);
+window.addEventListener("load", checkScroll);
 </script>
+
 </body>
 </html>
