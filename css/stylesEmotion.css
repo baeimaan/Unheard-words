@@ -1,0 +1,15 @@
+.gallery-flex {
+    display: none;
+}
+
+#all-checked ~ .gallery-flex .photo-card {
+    display: block;
+}
+
+#happy:checked ~ .gallery-flex .happy {
+     display: block;
+}
+
+#peace:checked ~ .gallery-flex .peace {
+     display: block;
+}

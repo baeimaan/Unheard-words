@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 <head>
   <title>My Favorites</title>
   <meta charset="UTF-8">
@@ -29,33 +27,19 @@
 <main class="favorites-main">
     <h2>My Favorites</h2>
     <p>Here are all the images you have liked.</p>
-    <div class="gallery-grid" id="favoritesGrid">
+
+    <div class="favorite-photo">
+      <a href="images/inspiration/land1.jpg" target="_blank">
+      <img src="images/inspiration/land1.jpg" alt="Landscape photo 1">
+    </div>
+    <div class="favorite-photo">
+      <a href="images/inspiration/land2.jpg" target="_blank">
+      <img src="images/inspiration/land2.jpg" alt="Landscape photo 2">
     </div>
 </main>
 
 <footer>
     <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
 </footer>
-
-<script>
-  const favoritesGrid = document.getElementById('favoritesGrid');
-  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
-  favorites.forEach(img => {
-      const div = document.createElement('div');
-      div.className = 'photo-card';
-      div.innerHTML = `
-          <img src="images/${img}" alt="Favorite photo">
-          <button onclick="removeFavorite('${img}')">❌ Remove</button>
-      `;
-      favoritesGrid.appendChild(div);
-  });
-
-  function removeFavorite(imgName) {
-      const updatedFavorites = favorites.filter(img => img !== imgName);
-      localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
-      location.reload();
-  }
-</script>
 </body>
 </html>

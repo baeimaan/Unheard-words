@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 <head>
   <title>Search by Emotion - Unheard Words</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/stylesUnheardWords.css">
   <link rel="stylesheet" href="css/styleHeaderGeneral.css">
+  <link rel="stylesheet" href="css/stylesEmotion.css">
 </head>
 
 <body>
@@ -32,11 +30,11 @@
 </header>
 
 <main>
-  <section class="emotion-search">
-    <h2>Filter photos by emotion</h2>
-    <label for="emotion-filter">Select an emotion:</label>
-    <select id="emotion-filter">
-        <option value="">All emotions</option>
+  <h2>Inspiration</h2>
+  <p>A collection of all the images on the website.</p>
+  <label for="emotion-filter">Select an emotion:</label>
+    <select onchange="location = this.value" id="emotion-filter">
+        <option value="#all emotions">All emotions</option>
         <option value="peace">Peace</option>
         <option value="silence">Silence</option>
         <option value="anxiety">Anxiety</option>
@@ -49,97 +47,25 @@
         <option value="boredom">Boredom</option>
         <option value="excitement">Excitement</option>
         <option value="anger">Anger</option>
-        <option value="hope">HopeKora</option>
+        <option value="hope">Hope</option>
     </select>
-  </section>
-  <section class="feature-section" id="emotion-feature">
-      <div class="feature-container">
-          <h2>Photo gallery</h2>
 
-          <div class="feature-flex" id="emotion-gallery">
-              
-            <div class="feature-item" data-emotion="peace">
-                <img src="images/gallery/portrait1.jpg" data-emotion="boredom">
-                <img src="images/gallery/portrait2.jpg" data-emotion="silence">
-                <img src="images/gallery/portrait3.jpg" data-emotion="peace"> 
-                <img src="images/gallery/portrait4.jpg" data-emotion="excitement"> 
-                <img src="images/gallery/portrait5.jpg" data-emotion="sadness"> 
-                <img src="images/gallery/portrait6.jpg" data-emotion="sadness"> 
-                <img src="images/gallery/portrait7.jpg" data-emotion="anxiety">
-                <img src="images/gallery/portrait8.jpg" data-emotion="joy"> 
-                <img src="images/gallery/portrait9.jpg" data-emotion="love"> 
-                <img src="images/gallery/portrait10.jpg" data-emotion="fear"> 
-                <img src="images/gallery/portrait11.jpg" data-emotion="joy"> 
-                <img src="images/gallery/portrait12.jpg" data-emotion="excitement"> 
-                <img src="images/gallery/portrait13.jpg" data-emotion="peace"> 
-                <img src="images/gallery/portrait14.jpg" data-emotion="fear"> 
-                <img src="images/gallery/portrait15.jpg" data-emotion="silence"> 
-                <img src="images/gallery/portrait16.jpg" data-emotion="hope"> 
-                <img src="images/gallery/portrait17.jpg" data-emotion="sadness"> 
-                <img src="images/gallery/portrait18.jpg" data-emotion="peace"> 
-                <img src="images/gallery/portrait19.jpg" data-emotion="joy"> 
-                <img src="images/gallery/portrait20.jpg" data-emotion="love">        
-            </div>
-          </div>
-      </div>
-  </section>
+    <section id="peace"></section>
+
+  <div class="gallery-flex">
+    <div class="photo-card peace">
+      <img src="images/inspiration/land1.jpg" alt="Landscape photo 1">
+      <p>Peace</p>
+    </div>
+    <div class="photo-card peace">
+      <img src="images/inspiration/land2.jpg" alt="Landscape photo 2">
+      <p>Peace</p>
+    </div>
+  </div>
 </main>
 
 <footer>
     <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
 </footer>
-
-<script>
-const filter = document.getElementById('emotion-filter');
-const gallery = document.getElementById('emotion-gallery');
-const items = gallery.querySelectorAll('.feature-item');
-
-function filterPhotos(emotion) {
-    items.forEach(item => {
-        const emotions = item.dataset.emotion.split(',');
-        if (!emotion || emotions.includes(emotion)) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-}
-
-filter.addEventListener('change', () => {
-    filterPhotos(filter.value);
-});
-
-function getEmotionFromURL() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get('emotion');
-}
-
-const initialEmotion = getEmotionFromURL();
-if (initialEmotion) {
-    filter.value = initialEmotion;
-    filterPhotos(initialEmotion);
-}
-
-const section = document.querySelector('.feature-section');
-const featureItems = document.querySelectorAll('.feature-item');
-
-function checkScroll() {
-    const trigger = window.innerHeight * 0.85;
-
-    if (section.getBoundingClientRect().top < trigger) {
-        section.classList.add("show-section");
-    }
-
-    featureItems.forEach(item => {
-        if (item.getBoundingClientRect().top < trigger) {
-            item.classList.add("show");
-        }
-    });
-}
-
-window.addEventListener("scroll", checkScroll);
-window.addEventListener("load", checkScroll);
-</script>
-
 </body>
 </html>
