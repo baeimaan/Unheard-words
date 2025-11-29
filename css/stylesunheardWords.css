@@ -1,16 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #111;
+}
 
 h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Verdana, sans-serif;
     font-weight: 600;
     color: #111;
     margin: 0.5em 0;
     letter-spacing: 0.5px;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #111;
-}
 a {
     text-decoration: none;
     color: inherit;
@@ -20,11 +22,6 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.search-section {
-    text-align: center;
-    margin-top: 1.5rem;
 }
 
 .search-form {
@@ -37,7 +34,6 @@ ul {
     padding: 0.5rem;
     border: 1px solid #d0d0d0;
     border-radius: 4px 0 0 4px;
-    font-family: 'Roboto', sans-serif;
     width: 250px;
 }
 
@@ -48,29 +44,23 @@ ul {
     color: #ffffff;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .search-form button:hover {
     background-color: #000000;
 }
-
 .intro-section {
     padding: 120px 20px;
     max-width: 1100px;
     margin: 0 auto;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .intro-section h1 {
     font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-weight: bold;
     margin-bottom: 20px;
     line-height: 1.2;
     color: #0a1d4d;
@@ -106,16 +96,12 @@ ul {
 .feature-block h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #111;
-    margin-bottom: 15px;
 }
 
 .feature-block p {
     font-size: 1rem;
     color: #555;
-    line-height: 1.5;
 }
-
 .feature-section {
     background-color: #335437c3;
     padding: 100px 00px 50px 0px;
@@ -125,7 +111,7 @@ ul {
 }
 
 .second-feature {
-    background-color: #9f6e3abf;
+    background-color: #9f6e3a3b;
 }
 
 .third-feature {
@@ -135,12 +121,10 @@ ul {
 .feature-container {
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .feature-section h2 {
     font-size: 2rem;
-    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     margin-bottom: 50px;
 }
@@ -198,30 +182,30 @@ ul {
 
 .gallery-flex {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
-    margin-top: 20px;
+    gap: 40px;
+    justify-content: center;
 }
 
-.gallery-flex figure {
-    width: 200px;
+.feature-item {
     text-align: center;
-    font-family: 'Roboto', sans-serif;
 }
 
-.gallery-flex img {
+.feature-item img {
     width: 100%;
-    height: auto;
     border-radius: 10px;
+    transition: transform 0.3s ease, border 0.3s ease;
 }
 
-.under-banner-img img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
+.feature-item img:hover {
+    transform: scale(1.05);
+    border: 2px solid #236238;
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
 }
 
 .menu ul {
@@ -232,7 +216,6 @@ ul {
 }
 
 .menu li a {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
