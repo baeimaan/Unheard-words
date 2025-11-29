@@ -1,3 +1,4 @@
+
 h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -7,12 +8,9 @@ h2, h3, h4, h5, h6 {
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Roboto', sans-serif;
     color: #111;
 }
-
 a {
     text-decoration: none;
     color: inherit;
@@ -120,7 +118,7 @@ ul {
 
 .feature-section {
     background-color: #335437c3;
-    padding: 100px 20px;
+    padding: 100px 00px 50px 0px;
     overflow: hidden;
     position: relative;
     transform: translateY(0);
@@ -147,9 +145,10 @@ ul {
     margin-bottom: 50px;
 }
 
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.feature-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 40px;
     margin-top: 50px;
 }
@@ -172,6 +171,8 @@ ul {
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s ease;
+    flex:1 1 200px;
+    max-width: 300px;
 }
 
 .feature-item.show {
@@ -245,10 +246,3 @@ ul {
 }
 
 
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-}
