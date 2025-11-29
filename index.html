@@ -1,36 +1,39 @@
-<!DOCTYPE html>
-<html>
+<<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Unheard Words</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <title>Unheard Words</title>
   <link rel="stylesheet" href="css/stylesUnheardWords.css">
   <link rel="stylesheet" href="css/styleHeaderGeneral.css">
 </head>
 
 <body>
+
 <header class="header">
   <div class="hero-content">
     <h1>Unheard Words</h1>
     <p>Discover the emotions behind every photograph</p>
   </div>
+
   <div class="search-container">
-    <form class="search-form" onsubmit="return searchEmotion()">
-      <input type="text" id="global-search" placeholder="Which emotion are you looking for?">
+    <!-- Formulario sin JS -->
+    <form class="search-form" action="emotions.html" method="get">
+      <input type="text" name="emotion" placeholder="Which emotion are you looking for?">
       <button type="submit">Search</button>
     </form>
   </div>
+
   <nav class="menu">
-      <ul>
-        <li><a href="index.html" class="current">Home</a></li>
-        <li><a href="emotions.html">Search by emotion</a></li>
-        <li><a href="gallery.html">Photo categories</a></li>
-        <li><a href="inspiration.html">Inspiration</a></li>
-        <li><a href="favorits.html">My favorites</a></li>
-        <li><a href="nosaltres.html">About Us</a></li>
-        <li><a href="que_en_penses.html">Your opinion matters to us</a></li>
-      </ul>
+    <ul>
+      <li><a href="index.html" class="current">Home</a></li>
+      <li><a href="emotions.html">Search by emotion</a></li>
+      <li><a href="gallery.html">Photo categories</a></li>
+      <li><a href="inspiration.html">Inspiration</a></li>
+      <li><a href="favorits.html">My favorites</a></li>
+      <li><a href="nosaltres.html">About Us</a></li>
+      <li><a href="que_en_penses.html">Your opinion matters to us</a></li>
+    </ul>
   </nav>
 </header>
 
@@ -65,20 +68,20 @@
       
       <div class="feature-grid">
         <div class="feature-item">
-          <img src="images/index/escapism.jpg" alt="Escapism">
-          <p>A captivating moment captured in Escapism</p>
+          <img src="img/index/escapism.jpg" alt="Escapism">
+          <p class="caption">A captivating moment captured in Escapism</p>
         </div>
         <div class="feature-item">
-          <img src="images/index/numbness.jpg" alt="Numbness">
-          <p>A frozen emotion, captured in Numbness</p>
+          <img src="img/index/numbness.jpg" alt="Numbness">
+          <p class="caption">A frozen emotion, captured in Numbness</p>
         </div>
         <div class="feature-item">
-          <img src="images/index/yearning.jpg" alt="Yearning">
-          <p>The ache of longing expressed in Yearning</p>
+          <img src="img/index/yearning.jpg" alt="Yearning">
+          <p class="caption">The ache of longing expressed in Yearning</p>
         </div>
         <div class="feature-item">
-          <img src="images/index/toFeel.jpg" alt="The art of touch">
-          <p>The art of sensing through touch</p>
+          <img src="img/index/toFeel.jpg" alt="The art of touch">
+          <p class="caption">The art of sensing through touch</p>
         </div>
       </div>
     </div>
@@ -90,83 +93,51 @@
       
       <div class="feature-grid">
         <div class="feature-item">
-          <img src="images/index2/lingeringGaze.jpg" alt="Lingering Gaze">
-          <p>The art of staying in someone's eyes a second too long</p>
+          <img src="img/index2/lingeringGaze.jpg" alt="Lingering Gaze">
+          <p class="caption">The art of staying in someone's eyes a second too long</p>
         </div>
         <div class="feature-item">
-          <img src="images/index2/sadness.jpg" alt="Sadness">
-          <p>The quiet of hidden sadness</p>
+          <img src="img/index2/sadness.jpg" alt="Sadness">
+          <p class="caption">The quiet of hidden sadness</p>
         </div>
         <div class="feature-item">
-          <img src="images/index2/kintsugiEmotions.jpg" alt="Kintsugi emotions">
-          <p>The art of carrying your scars like treasure</p>
+          <img src="img/index2/kintsugiEmotions.jpg" alt="Kintsugi emotions">
+          <p class="caption">The art of carrying your scars like treasure</p>
         </div>
         <div class="feature-item">
-          <img src="images/index2/kora.jpg" alt="Kora">
-          <p>The art of wrapping yourself in silence</p>
+          <img src="img/index2/kora.jpg" alt="Kora">
+          <p class="caption">The art of wrapping yourself in silence</p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="feature-section third-feature">
-  <div class="feature-container">
-    <h2>Unveiling hidden stories through subtle details</h2>
-    
-    <div class="feature-grid">
-      <div class="feature-item">
-        <img src="images/index2/Eunoia.jpg" alt="Eunoia photo">
-        <p>The art of holding harmony inside</p>
-      </div>
-      <div class="feature-item">
-        <img src="images/index2/Ambedo.jpg" alt="Ambedo photo">
-        <p>The art of getting lost in the moment.</p>
-      </div>
-      <div class="feature-item">
-        <img src="images/index2/Deja vu.jpg" alt="Deja vu photo">
-        <p>The art of reliving a stolen moment</p>
+    <div class="feature-container">
+      <h2>Unveiling hidden stories through subtle details</h2>
+      
+      <div class="feature-grid">
+        <div class="feature-item">
+          <img src="img/index2/Eunoia.jpg" alt="Eunoia photo">
+          <p class="caption">The art of holding harmony inside</p>
+        </div>
+        <div class="feature-item">
+          <img src="img/index2/Ambedo.jpg" alt="Ambedo photo">
+          <p class="caption">The art of getting lost in the moment.</p>
+        </div>
+        <div class="feature-item">
+          <img src="img/index2/Deja vu.jpg" alt="Deja vu photo">
+          <p class="caption">The art of reliving a stolen moment</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+</main>
 
 <footer>
   <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
 </footer>
-
-<script>
-function searchEmotion() {
-    const query = document.getElementById('global-search').value.trim().toLowerCase();
-    if (!query) {
-        alert('Please enter an emotion to search.');
-        return false;
-    }
-
-    window.location.href = `emotions.html?emotion=${encodeURIComponent(query)}`;
-    return false;
-}
-</script>
-
-<script>
-const featureSections = document.querySelectorAll('.feature-section');
-const items = document.querySelectorAll('.feature-item');
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-
-  featureSections.forEach(section => {
-    section.style.transform = `translateY(${scrollY * -0.2}px)`;
-  });
-  const triggerBottom = window.innerHeight * 0.8;
-  items.forEach(item => {
-    const itemTop = item.getBoundingClientRect().top;
-    if(itemTop < triggerBottom){
-      item.classList.add('show');
-    }
-  });
-});
-</script>
 
 </body>
 </html>
