@@ -1,17 +1,23 @@
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -10px;
 }
 
 .photo-card {
+    aspect-ratio: 3 / 4; 
+    width: 180px;
+    margin: 10px;
+    border-radius: 20px;
     position: relative;
+    overflow-y: hidden;
 }
 
 .photo-card img {
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .photo-card button {
