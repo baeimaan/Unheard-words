@@ -24,16 +24,22 @@ main {
     gap: 10px 20px;
 }
 
-.radio {
+label.radio {
     display: flex;
     align-items: center;
     cursor: pointer;
+    gap: 10px;
 }
 
-.radio input {
+input[type="radio"] {
     margin-right: 6px;
     width: 16px;
     height: 16px;
+}
+
+.label.radio span {
+    font-size: 1rem;
+    margin-left: 5px;
 }
 
 .emotion {

@@ -28,6 +28,15 @@
     #all:checked ~ .gallery .hidden-image {
         display: block;
     }
+
+    .hidden-image {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    }
+
+    .hidden-image:visible {
+    opacity: 1;
+    }
     </style>
 </head>
 
