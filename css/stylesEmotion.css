@@ -47,14 +47,14 @@ main {
 }
 
 
-.gallery-flex {
+.emotion {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.gallery-flex img {
+.emotion img {
     max-width: 150px;
     height: 180px;
     display: block;
@@ -63,20 +63,27 @@ main {
 
 }
 
-.gallery-flex img:hover {
+.emotion img:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 15px #00000040;
 }
 
 
-#all-checked ~ .gallery-flex .photo-card {
+#all:checked ~ .emotions-gallery .emotion img {
     display: block;
 }
-
-#happy:checked ~ .gallery-flex .happy {
-     display: block;
-}
-
-#peace:checked ~ .gallery-flex .peace {
-     display: block;
+#peace:checked ~ .emotions-gallery .peace img,
+#happiness:checked ~ .emotions-gallery .happiness img,
+#fear:checked ~ .emotions-gallery .fear img,
+#boredom:checked ~ .emotions-gallery .boredom img,
+#silence:checked ~ .emotions-gallery .silence img,
+#anxiety:checked ~ .emotions-gallery .anxiety img,
+#joy:checked ~ .emotions-gallery .joy img,
+#sadness:checked ~ .emotions-gallery .sadness img,
+#stress:checked ~ .emotions-gallery .stress img,
+#excitement:checked ~ .emotions-gallery .excitement img,
+#anger:checked ~ .emotions-gallery .anger img,
+#hope:checked ~ .emotions-gallery .hope img,
+#love:checked ~ .emotions-gallery .love img {
+    display: block;
 }
