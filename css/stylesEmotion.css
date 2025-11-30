@@ -46,15 +46,7 @@ main {
     padding-left: 10px;
 }
 
-<<<<<<< HEAD
-=======
-.emotions-gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
 
->>>>>>> da5b5d8 (MEJORAR HTML Y CSS EMOTIONS)
 .gallery-flex {
     display: flex;
     justify-content: flex-start;
@@ -68,13 +60,7 @@ main {
     display: block;
     object-fit: cover;
     border-radius: 10px;
-<<<<<<< HEAD
 
-=======
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-    aspect-ratio: 3/4;
->>>>>>> da5b5d8 (MEJORAR HTML Y CSS EMOTIONS)
 }
 
 .gallery-flex img:hover {
