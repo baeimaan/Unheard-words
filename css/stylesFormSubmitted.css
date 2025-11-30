@@ -21,9 +21,10 @@
 
 .back-home {
     background-color: #236238;
+    display: inline-block;
     color: #ffffff;
     padding: 12px 30px;
-    font-size: 1.1rem;
+    font-weight: bold;
     border: none;
     border-radius: 8px;
     cursor: pointer;
