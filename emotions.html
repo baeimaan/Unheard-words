@@ -3,49 +3,20 @@
 <head>
   <title>Search by Emotion - Unheard Words</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search by Emotion - Unheard Words</title>
   <link rel="stylesheet" href="css/styleHeaderGeneral.css">
   <link rel="stylesheet" href="css/stylesEmotion.css">
   <style>
-    .hidden-image {
-        display: none;
-        width: 100%;
-        max-width: 500px;                
-        margin-top: 10px;
-    }
-
-    #peace:checked ~ .gallery #peace-gallery .hidden-image,
-    #silence:checked ~ .gallery #silence-gallery .hidden-image,
-    #anxiety:checked ~ .gallery #anxiety-gallery .hidden-image,
-    #joy:checked ~ .gallery #joy-gallery .hidden-image,
-    #happiness:checked ~ .gallery #happiness-gallery .hidden-image,
-    #sadness:checked ~ .gallery #sadness-gallery .hidden-image,
-    #stress:checked ~ .gallery #stress-gallery .hidden-image,
-    #fear:checked ~ .gallery #fear-gallery .hidden-image,
-    #boredom:checked ~ .gallery #boredom-gallery .hidden-image,
-    #excitement:checked ~ .gallery #excitement-gallery .hidden-image,
-    #anger:checked ~ .gallery #anger-gallery .hidden-image,
-    #hope:checked ~ .gallery #hope-gallery .hidden-image,
-    #all:checked ~ .gallery .hidden-image {
-        display: block;
-    }
-
-    .hidden-image {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    }
-
-    .hidden-image:visible {
-    opacity: 1;
-    }
-    </style>
+  </style>
 </head>
 
 <body>
 <header class="header">
-    <div class="hero-content">
-      <h1>Unheard Words</h1>
-      <p>Find photos that match your feelings</p>
-    </div>
+  <div class="hero-content">
+    <h1>Unheard Words</h1>
+    <p>Find photos that match your feelings</p>
+  </div>
 
   <nav class="menu">
       <ul>
@@ -59,217 +30,120 @@
       </ul>
   </nav>
 </header>
+
 <main>
-    <h2>Emotion-filter</h2>
-    <p>A collection of all the images on the website.</p>
-    <div class="block-emotion">
-        <div class="filter">
-            <p>Select an emotion:</p>
+  <h2>Emotion-filter</h2>
+  <p>Select an emotion to see the related photos.</p>
 
-            <label class="radio">
-                <input type="radio" name="emotion" id="all" checked>
-                <span>All emotions</span>
-            </label>    
-            <label class="radio">
-                <input type="radio" name="emotion" id="peace">
-                <span>Peace</span>
-            </label> 
-            <label class="radio">
-                <input type="radio" name="emotion" id="silence">
-                <span>Silence</span>
-            </label>
-            <label class="radio">
-                <input type="radio" name="emotion" id="anxiety">
-                <span>Anxiety</span>
-            </label>
-            <label class="radio">
-                <input type="radio" name="emotion" id="joy">
-                <span>Joy</span>
-            </label>
-            <label class="radio">
-                <input type="radio" name="emotion" id="happiness">
-                <span>Happiness</span>
-            </label>
-            <label class="radio">
-                <input type="radio" name="emotion" id="sadness">
-                <span>Sadness</span>
-            </label>
-            <label class="radio">
-                <input type="radio" name="emotion" id="stress">
-                <span>Stress</span>
-            </label>
-            <label class="radio">
-                <input type="radio" name="emotion" id="fear">
-                <span>Fear</span>
-            </label>
-            <label class="radio">
-                <input type="radio" name="emotion" id="boredom">
-                <span>Boredom</span>
-            </label>
-            <label class="radio">
-                <input type="radio" name="emotion" id="excitement">
-                <span>Excitement</span>
-            </label>
-            <label class="radio">
-                <input type="radio" name="emotion" id="anger">
-                <span>Anger</span>
-            </label>
-            <label class="radio">
-                <input type="radio" name="emotion" id="hope">
-                <span>Hope</span>
-            </label>
-        </div>    
+  <div class="block-emotion">
+    <div class="filter">
+      <label><input type="radio" name="emotion" value="all" checked> All emotions</label>
+      <label><input type="radio" name="emotion" value="peace"> Peace</label>
+      <label><input type="radio" name="emotion" value="silence"> Silence</label>
+      <label><input type="radio" name="emotion" value="anxiety"> Anxiety</label>
+      <label><input type="radio" name="emotion" value="joy"> Joy</label>
+      <label><input type="radio" name="emotion" value="happiness"> Happiness</label>
+      <label><input type="radio" name="emotion" value="sadness"> Sadness</label>
+      <label><input type="radio" name="emotion" value="stress"> Stress</label>
+      <label><input type="radio" name="emotion" value="fear"> Fear</label>
+      <label><input type="radio" name="emotion" value="boredom"> Boredom</label>
+      <label><input type="radio" name="emotion" value="excitement"> Excitement</label>
+      <label><input type="radio" name="emotion" value="anger"> Anger</label>
+      <label><input type="radio" name="emotion" value="hope"> Hope</label>
     </div>
+  </div>
 
-    <h2>Emotions-Gallery</h2>
-    <div class="gallery">
+  <h2>Emotions Gallery</h2>
+  <div class="gallery">
 
-<<<<<<< HEAD
-        <section class="emotions-gallery" id="fear-gallery">
-            <h3>FEAR</h3>
-            <div class="emotion fear">
-                <img src="images/emotions/portrait.jpg" class="hidden-image">
-                <img src="images/emotions/portrait10.jpg" class="hidden-image">
-                <img src="images/emotions/portrait14.jpg" class="hidden-image">
-            </div>
-        </section>
-        <section class="emotions-gallery" id="boredom-gallery">
-            <h3>BOREDOM</h3>
-            <div class="emotion boredom">
-                <img src="images/emotions/portrait1.jpg" class="hidden-image">
-            </div>
-        </section>
-        <section class="emotions-gallery" id="silence-gallery">
-            <h3>SILENCE</h3>
-            <div class="emotion silence">
-                <img src="images/emotions/portrait2.jpg" class="hidden-image">
-                <img src="images/emotions/portrait15.jpg" class="hidden-image">
-            </div>
-        </section>
-        <section class="emotions-gallery" id="peace-gallery">
-            <h3>PEACE</h3>
-            <div class="emotion peace">
-                <img src="images/emotions/portrait3.jpg" class="hidden-image">
-                <img src="images/emotions/portrait13.jpg" class="hidden-image">
-                <img src="images/emotions/portrait18.jpg" class="hidden-image">
-            </div>
-        </section>
-        <section class="emotions-gallery" id="excitement-gallery">
-            <h3>EXCITEMENT</h3>
-            <div class="emotion excitement">
-                <img src="images/emotions/portrait4.jpg" class="hidden-image">
-                <img src="images/emotions/portrait12.jpg" class="hidden-image">
-            </div>
-        </section>
-        <section class="emotions-gallery" id="sadness-gallery">
-            <h3>SADNESS</h3>
-            <div class="emotion sadness">
-                <img src="images/emotions/portrait5.jpg" class="hidden-image">
-                <img src="images/emotions/portrait6.jpg" class="hidden-image">
-                <img src="images/emotions/portrait17.jpg" class="hidden-image">
-            </div>
-        </section>
-        <section class="emotions-gallery" id="joy-gallery">
-            <h3>JOY</h3>
-            <div class="emotion joy">
-                <img src="images/emotions/portrait19.jpg" class="hidden-image">
-                <img src="images/emotions/portrait11.jpg" class="hidden-image">
-                <img src="images/emotions/portrait8.jpg" class="hidden-image">
-            </div>
-        </section>
-        <section class="emotions-gallery" id="love-gallery">
-            <h3>LOVE</h3>
-            <div class="emotion love">
-                <img src="images/emotions/portrait9.jpg" class="hidden-image">
-                <img src="images/emotions/portrait20.jpg" class="hidden-image">
-            </div>
-        </section>
-        <section class="emotions-gallery" id="anxiety-gallery">
-            <h3>ANXIETY</h3>
-            <div class="emotion anxiety">
-                <img src="images/emotions/portrait9.jpg" class="hidden-image">
-                <img src="images/emotions/portrait20.jpg" class="hidden-image">
-            </div>
-        </section>
-    </div> 
-=======
-    <section class="emotions-gallery">
-        <h3>FEAR</h3>
-        <div class="emotion fear">
-            <img src="images/emotions/portrait.jpg">
-            <img src="images/emotions/portrait10.jpg">
-        </div>
+    <section class="emotions-gallery" data-emotion="fear">
+      <h3>FEAR</h3>
+      <img src="images/emotions/portrait.jpg">
+      <img src="images/emotions/portrait10.jpg">
+      <img src="images/emotions/portrait14.jpg">
     </section>
-    <section class="emotions-gallery">
-        <h3>BOREDOM</h3>
-        <div class="emotion boredom">
-            <img src="images/emotions/portrait1.jpg">
-        </div>
 
-  </section>
-    <section class="emotions-gallery">
-        <h3>SILENCE</h3>
-        <div class="emotion silence">
-            <img src="images/emotions/portrait2.jpg">
-            <img src="images/emotions/portrait15.jpg">
-        </div>
+    <section class="emotions-gallery" data-emotion="peace">
+      <h3>PEACE</h3>
+      <img src="images/emotions/portrait3.jpg">
+      <img src="images/emotions/portrait13.jpg">
+      <img src="images/emotions/portrait18.jpg">
     </section>
-    <section class="emotions-gallery">
-        <h3>PEACE</h3>
-        <div class="emotion peace">
-            <img src="images/emotions/portrait3.jpg">
-            <img src="images/emotions/portrait13.jpg">
-            <img src="images/emotions/portrait18.jpg">
-        </div>
+
+    <section class="emotions-gallery" data-emotion="silence">
+      <h3>SILENCE</h3>
+      <img src="images/emotions/portrait2.jpg">
+      <img src="images/emotions/portrait15.jpg">
     </section>
-    <section class="emotions-gallery">
-        <h3>EXCITEMENT</h3>
-        <div class="emotion excitement">
-            <img src="images/emotions/portrait4.jpg">
-            <img src="images/emotions/portrait12.jpg">
-        </div>
+
+    <section class="emotions-gallery" data-emotion="boredom">
+      <h3>BOREDOM</h3>
+      <img src="images/emotions/portrait1.jpg">
     </section>
-    <section class="emotions-gallery">
-        <h3>SADNESS</h3>
-        <div class="emotion sadness">
-            <img src="images/emotions/portrait5.jpg">
-            <img src="images/emotions/portrait6.jpg">
-            <img src="images/emotions/portrait17.jpg">
-        </div>
+
+    <section class="emotions-gallery" data-emotion="joy">
+      <h3>JOY</h3>
+      <img src="images/emotions/portrait19.jpg">
+      <img src="images/emotions/portrait11.jpg">
+      <img src="images/emotions/portrait8.jpg">
     </section>
-    <section class="emotions-gallery">
-        <h3>JOY</h3>
-        <div class="emotion joy">
-            <img src="images/emotions/portrait19.jpg">
-            <img src="images/emotions/portrait11.jpg">
-            <img src="images/emotions/portrait8.jpg">
-        </div>
+
+    <section class="emotions-gallery" data-emotion="sadness">
+      <h3>SADNESS</h3>
+      <img src="images/emotions/portrait5.jpg">
+      <img src="images/emotions/portrait6.jpg">
+      <img src="images/emotions/portrait17.jpg">
     </section>
-    <section class="emotions-gallery">
-        <h3>LOVE</h3>
-        <div class="emotion love">
-            <img src="images/emotions/portrait9.jpg">
-            <img src="images/emotions/portrait20.jpg">
-        </div>
+
+    <section class="emotions-gallery" data-emotion="excitement">
+      <h3>EXCITEMENT</h3>
+      <img src="images/emotions/portrait4.jpg">
+      <img src="images/emotions/portrait12.jpg">
     </section>
-    <section class ="emotions-gallery">
-        <h3>ANXIETY</h3>
-        <div class="emotion anxiety">
-            <img src="images/emotions/portrait7.jpg">
-        </div>
+
+    <section class="emotions-gallery" data-emotion="anxiety">
+      <h3>ANXIETY</h3>
+      <img src="images/emotions/portrait9.jpg">
+      <img src="images/emotions/portrait20.jpg">
     </section>
-    <section class="emotions-gallery">
-        <h3>HOPE</h3>
-        <div class="emotion hope">
-            <img src="images/emotions/portrait16.jpg">
-        </div>
+
+    <section class="emotions-gallery" data-emotion="love">
+      <h3>LOVE</h3>
+      <img src="images/emotions/portrait9.jpg">
+      <img src="images/emotions/portrait20.jpg">
     </section>
->>>>>>> f4734673df669baf7ea016388991985dc8cacf9c
+
+  </div>
 </main>
-<footer>
-    <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
-</footer> 
-</body>  
-</html>     
 
-    
+<footer>
+  <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const radios = document.querySelectorAll('input[name="emotion"]');
+    const galleries = document.querySelectorAll('.emotions-gallery');
+
+    function filterGallery(emotion) {
+      galleries.forEach(section => {
+        if (emotion === "all" || section.dataset.emotion === emotion) {
+          section.style.display = "block";
+        } else {
+          section.style.display = "none";
+        }
+      });
+    }
+
+    radios.forEach(radio => {
+      radio.addEventListener("change", () => {
+        filterGallery(radio.value);
+      });
+    });
+
+    filterGallery("all");
+  });
+</script>
+
+</body>
+</html>
