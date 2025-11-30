@@ -96,57 +96,5 @@
     <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
 </footer>
 
-<script>
-const filter = document.getElementById('emotion-filter');
-const gallery = document.getElementById('emotion-gallery');
-const items = gallery.querySelectorAll('.feature-item');
-
-function filterPhotos(emotion) {
-    items.forEach(item => {
-        const emotions = item.dataset.emotion.split(',');
-        if (!emotion || emotions.includes(emotion)) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-}
-
-filter.addEventListener('change', () => {
-    filterPhotos(filter.value);
-});
-
-function getEmotionFromURL() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get('emotion');
-}
-
-const initialEmotion = getEmotionFromURL();
-if (initialEmotion) {
-    filter.value = initialEmotion;
-    filterPhotos(initialEmotion);
-}
-
-const section = document.querySelector('.feature-section');
-const featureItems = document.querySelectorAll('.feature-item');
-
-function checkScroll() {
-    const trigger = window.innerHeight * 0.85;
-
-    if (section.getBoundingClientRect().top < trigger) {
-        section.classList.add("show-section");
-    }
-
-    featureItems.forEach(item => {
-        if (item.getBoundingClientRect().top < trigger) {
-            item.classList.add("show");
-        }
-    });
-}
-
-window.addEventListener("scroll", checkScroll);
-window.addEventListener("load", checkScroll);
-</script>
-
 </body>
 </html>
