@@ -37,6 +37,7 @@
 </header>
 
 <main>
+
   <section class="intro-section">
     <div class="intro-wrapper">
       <h1>Welcome to Unheard Words</h1>
@@ -63,7 +64,6 @@
   <section class="feature-section">
     <div class="feature-container">
       <h2>Combining true emotions & an editorial style to create timeless + bold imagery.</h2>
-      
       <div class="feature-flex">
         <div class="feature-item">
           <img src="img/index/escapism.jpg" alt="Escapism">
@@ -88,51 +88,85 @@
   <section class="feature-section second-feature">
     <div class="feature-container">
       <h2>Exploring deeper emotions through evocative visuals</h2>
-      
       <div class="feature-flex">
         <div class="feature-item">
-          <img src="images/index/lingeringGaze.jpg" alt="Lingering Gaze photo">
-          <p>The art of staying in someone's eyes a second too long</p>
+          <img src="img/index/lingeringGaze.jpg" alt="Lingering Gaze">
+          <p class="caption">The art of staying in someone's eyes a second too long</p>
         </div>
         <div class="feature-item">
-          <img src="images/index/sadness.jpg" alt="Sadness photo">
-          <p>The quiet of hidden sadness</p>
+          <img src="img/index/sadness.jpg" alt="Sadness">
+          <p class="caption">The quiet of hidden sadness</p>
         </div>
         <div class="feature-item">
-          <img src="images/index/kintsugiEmotions.jpg" alt="Kintsugi emotions photo">
-          <p>The art of carrying your scars like treasure</p>
+          <img src="img/index/kintsugiEmotions.jpg" alt="Kintsugi emotions">
+          <p class="caption">The art of carrying your scars like treasure</p>
         </div>
         <div class="feature-item">
-          <img src="images/index/kora.jpg" alt="Kora photo">
-          <p>The art of wrapping yourself in silence</p>
+          <img src="img/index/kora.jpg" alt="Kora">
+          <p class="caption">The art of wrapping yourself in silence</p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="feature-section third-feature">
-  <div class="feature-container">
-    <h2>Unveiling hidden stories through subtle details</h2>
-    
-    <div class="feature-flex">
-      <div class="feature-item">
-        <img src="images/index/Eunoia.jpg" alt="Eunoia photo">
-        <p>The art of holding harmony inside</p>
-      </div>
-      <div class="feature-item">
-        <img src="images/index/Ambedo.jpg" alt="Ambedo photo">
-        <p>The art of getting lost in the moment.</p>
-      </div>
-      <div class="feature-item">
-        <img src="images/index/Deja vu.jpg" alt="Deja vu photo">
-        <p>The art of reliving a stolen moment</p>
+    <div class="feature-container">
+      <h2>Unveiling hidden stories through subtle details</h2>
+      <div class="feature-flex">
+        <div class="feature-item">
+          <img src="img/index/Eunoia.jpg" alt="Eunoia">
+          <p class="caption">The art of holding harmony inside</p>
+        </div>
+        <div class="feature-item">
+          <img src="img/index/Ambedo.jpg" alt="Ambedo">
+          <p class="caption">The art of getting lost in the moment.</p>
+        </div>
+        <div class="feature-item">
+          <img src="img/index/Deja vu.jpg" alt="Deja vu">
+          <p class="caption">The art of reliving a stolen moment</p>
+        </div>
       </div>
     </div>
   </section>
 
 </main>
+
 <footer>
   <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
 </footer>
+
+<script>
+function searchEmotion() {
+    const query = document.getElementById('global-search').value.trim().toLowerCase();
+    if (!query) {
+        alert('Please enter an emotion to search.');
+        return false;
+    }
+
+    window.location.href = `emotions.html?emotion=${encodeURIComponent(query)}`;
+    return false;
+}
+</script>
+
+<script>
+const featureSections = document.querySelectorAll('.feature-section');
+const items = document.querySelectorAll('.feature-item');
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+
+  featureSections.forEach(section => {
+    section.style.transform = `translateY(${scrollY * -0.2}px)`;
+  });
+  const triggerBottom = window.innerHeight * 0.8;
+  items.forEach(item => {
+    const itemTop = item.getBoundingClientRect().top;
+    if(itemTop < triggerBottom){
+      item.classList.add('show');
+    }
+  });
+});
+</script>
 </body>
 </html>
+
