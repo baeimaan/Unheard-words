@@ -30,6 +30,7 @@ main {
 .gallery-flex img {
     width: 220px;
     height: 180px;
+    aspect-ratio: 3/4;
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
