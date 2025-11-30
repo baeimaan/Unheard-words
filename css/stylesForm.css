@@ -5,7 +5,7 @@ main {
     background-image: url('../images/en_que_penses/natura1.jpeg');
     background-size: cover;
     background-position: center;
-    min-width: 100vh;
+    min-height: 100vh;
 }
 
 
@@ -13,7 +13,7 @@ main {
     background-color:#fce7b1;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 15 px #00000033;
+    box-shadow: 0 4px 15px #00000033;
     width: 100%;
     max-width: 500px;
 }
@@ -36,22 +36,32 @@ input, select, textarea {
 h2 {
     color: #222222;
     font-size: 28px;
+    text-align: center;
 }
 
-h3 {
-    color: #444444;
-    font-size: 22px;
-    margin-bottom: 10px;
+legend {
+    font-weight: bold;
 }
-
 
 label {
     display: block;
-    margin-top: 15px;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-top: 16px;
     font-size: 18px;
-    color: #555;
+    color: #363636;
 }
 
+label.radio-select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6px 0;
+}
+
+label.radio-select input[type="radio"] {
+    margin: 0;
+}
 
 #text,
 #email,
@@ -69,7 +79,7 @@ label {
 }
 
 fieldset {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 8px;
@@ -84,17 +94,18 @@ fieldset .options {
 } 
 
 fieldset .options label {
+    display: flex;
     flex: 1 1 45%;
+    justify-content: space-between;
     border: 1px solid #cccc;
     border-radius: 5px;
     padding: 10px;
     box-sizing: border-box;
     cursor: pointer;
-    text-align: center;
 }
 
 fieldset .options input[type="checkbox"] {
-    display: none;
+    margin: 0;
 }
 
 fieldset .options input[type="checkbox"]:checked + span {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" >
+    <meta charset="UTF-8">
     <title>Feedback Emocional</title>   
     <link rel="stylesheet" href="css/stylesForm.css">
     <link rel="stylesheet" href="css/styleHeaderGeneral.css">
@@ -21,72 +21,86 @@
         </ul>
     </nav>
 </header>
+<body>
 <main>
     <section class="form-section">
         <form id="feedbackForm" action="que_en_penses_enviat.html" method="get">
         <h2>Your opinion matters to us</h2>
+        <fieldset>
+            <legend>Personal Information</legend>
 
-        <h3>Personal Information</h3>
-        <label for="name">Your Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-        <label for="age">Age</label>
-        <input type="number" id="age" placeholder="Enter your age" min="1" max="110" required>
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="110" required>
+        </fieldset>
 
+        <fieldset>
+            <legend>What resolution do you prefer?</legend>   
+                <label class="radio-select">
+                    <span>Low</span>
+                    <input type="radio" name="resolution" value="low" required>
+                </label>
+                <label class="radio-select">
+                    <span>Medium</span>
+                    <input type="radio" name="resolution" value="medium" required>
+                </label> 
+                <label class="radio-select">
+                    <span>High</span>
+                    <input type="radio" name="resolution" value="high" required>
+                </label>
+         </fieldset>
 
-        <h3>What resolution do you prefer?</h3>   
-        <label for="resolution">
-            <input type="radio" name="resolution" value="low" required>Low</label>
-        <label for="resolution">
-            <input type="radio" name="resolution" value="medium" checked required>Medium</label> 
-        <label for="resolution">
-            <input type="radio" name="resolution" value="high" required>High</label>
-
-
-        <h3>Tell us how this photo made you feel.</h3>
-        <label for="emotion">Choose an emotion</label>
-        <select id="emotion" name="emotion" required>
-            <option value="happy" selected>Happy</option>
-            <option value="sad">Sad</option>
-            <option value="angry">Angry</option>        
-            <option value="fear">Fear</option>
-            <option value="calm">Calm</option>
-            <option value="anxious">Anxious</option>    
-            <option value="excited">Excited</option>
-            <option value="bored">Bored</option> 
-            <option value="other">Other</option> 
-        </select> 
-
+        <fieldset>
+            <legend>Tell us how this photo made you feel.</legend>
+                <label for="emotion">Choose an emotion</label>
+                <select id="emotion" name="emotion" required>
+                    <option value="happy" selected>Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="angry">Angry</option>        
+                    <option value="fear">Fear</option>
+                    <option value="calm">Calm</option>
+                    <option value="anxious">Anxious</option>    
+                    <option value="excited">Excited</option>
+                    <option value="bored">Bored</option> 
+                    <option value="other">Other</option> 
+                </select>
+        
         <label for="otherEmotion" id="otherLabel" style="display:none;">Please specify:</label>
         <input type="text" id="otherEmotion" name="otherEmotion" placeholder="Your emotion..." style="display:none;">
-       
-        <h3>Types of photos you're interested in:</h3> 
+        </fieldset> 
+
         <fieldset id="photoTypes">
-            <legend>Choose at least one type:</legend>
+            <legend>Types of photos you're interested in:</legend>
+            <p>Choose at least one:</p>
+
             <div class="option">
                 <label>
-                    <input type="checkbox" name="type" value="landscape" checked>
                     <span>Landscape</span>
+                    <input type="checkbox" name="type" value="landscape" checked>
                 </label>
                 <label>
-                    <input type="checkbox" name="type" value="urbana">
                     <span>Urbana </span>
+                    <input type="checkbox" name="type" value="urbana">                    
                 </label>
                 <label>
-                    <input type="checkbox" name="type" value="retrats">
                     <span>Portraits</span>
+                    <input type="checkbox" name="type" value="retrats">
                 </label>
             </div>    
         </fieldset>
         
-        <h3>Adittional comments</h3>
-        <p>Please share your ideas with us. If you have any suggestions for how we can improve, we would greatly appreciate it.</p>
-        <label for="comments">
-            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Your comments here..."></textarea>
-        </label>
+        <fieldset>
+            <legend>Adittional comments</legend>
+            <p>Please share your ideas with us. If you have any suggestions for how we can improve, we would greatly appreciate it.</p>
+                <label for="comments">
+                    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Your comments here..."></textarea>
+                </label>
+        </fieldset>
        
         <button type="submit">Submit</button>
         </form>
