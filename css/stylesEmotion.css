@@ -6,6 +6,33 @@ main {
     flex: 1;
 }
 
+.filter {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px #00000020;
+    margin-bottom: 2rem;
+}
+
+.filter p {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.filter .checkbox {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.filter .checkbox input[type="checkbox"] {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+}
+
 .category {
     margin-bottom: 3rem;
 }
@@ -19,6 +46,11 @@ main {
     padding-left: 10px;
 }
 
+.emotions-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 .gallery-flex {
     display: flex;
@@ -34,14 +66,13 @@ main {
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
+    aspect-ratio: 3/4;
 }
 
 .gallery-flex img:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 15px #00000040;
 }
-
-
 
 
 #all-checked ~ .gallery-flex .photo-card {

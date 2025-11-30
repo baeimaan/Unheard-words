@@ -58,7 +58,6 @@ label {
 label.radio-select,
 fieldset .option label {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     border-radius: 5px;
     gap: 10px;
@@ -66,8 +65,14 @@ fieldset .option label {
     cursor: pointer;
 } 
 
+label.radio-select span {
+    display: inline-block;
+    width: 80px;
+}
+
 label.radio-select input[type="radio"] {
     margin: 0;
+    flex-shrink: 0;
 }
 
 #text,
@@ -99,7 +104,6 @@ fieldset > div {
     flex-direction: column;
     gap: 10px;
 } 
-
 fieldset .option input[type="checkbox"] {
     margin: 0;
 }
