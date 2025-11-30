@@ -29,117 +29,145 @@
 </header>
 
 <main>
-  <h2>Emotion-filter</h2>
-  <p>A collection of all the images on the website.</p>
-  <label for="emotions-gallery">Select an emotion:</label>
-    <select onchange="location = this.value" id="emotion-filter">
-        <option value="#all emotions">All emotions</option>
-        <option value="peace">Peace</option>
-        <option value="silence">Silence</option>
-        <option value="anxiety">Anxiety</option>
-        <option value="joy">Joy</option>
-        <option value="happiness">Happiness</option>
-        <option value="sadness">Sadness</option>
-        <option value="love">Love</option>
-        <option value="stress">Stress</option>
-        <option value="fear">Fear</option>
-        <option value="boredom">Boredom</option>
-        <option value="excitement">Excitement</option>
-        <option value="anger">Anger</option>
-        <option value="hope">Hope</option>
-    </select>
+    <h2>Emotion-filter</h2>
+    <p>A collection of all the images on the website.</p>
+    <div class="filter">
+        <p>Select an emotion:</p>
 
-    <main class="emotions-gallery">
+        <div class="checkbox">
+            <input type="checkbox" id="all" checked>
+            <label for="all">All emotions</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="peace">
+            <label for="peace">Peace</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="silence">
+            <label for="silence">Silence</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="anxiety">
+            <label for="anxiety">Anxiety</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="joy">
+            <label for="joy">Joy</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="happiness">
+            <label for="happiness">Happiness</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="sadness">
+            <label for="sadness">Sadness</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="stress">
+            <label for="stress">Stress</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="fear">
+            <label for="fear">Fear</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="boredom">
+            <label for="boredom">Boredom</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="excitement">
+            <label for="excitement">Excitement</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="anger">
+            <label for="anger">Anger</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="hope">
+            <label for="hope">Hope</label>
+        </div>
+    </div>    
+
     <h2>Emotions-Gallery</h2>
 
     <section class="emotions-gallery">
         <h3>FEAR</h3>
-        <div class="gallery-flex">
-            <img src="images/gallery/portrait.jpg" data-emotion="fear">
-            <img src="images/gallery/portrait10.jpg" data-emotion="fear">
-            <img src="images/gallery/portrait14.jpg" data-emotion="fear">
+        <div class="emotion fear">
+            <img src="images/emotions/portrait.jpg">
+            <img src="images/emotions/portrait10.jpg">
+            <img src="images/emotions/portrait14.jpg">
         </div>
     </section>
     <section class="emotions-gallery">
         <h3>BOREDOM</h3>
-        <div class="gallery-flex">
-            <img src="images/inspiration/portrait1.jpg" data-emotion="boredom">
+        <div class="emotion boredom">
+            <img src="images/emotions/portrait1.jpg">
         </div>
 
   </section>
     <section class="emotions-gallery">
         <h3>SILENCE</h3>
-        <div class="gallery-flex">
-            <img src="images/gallery/portrait2.jpg" data-emotion="silence">
-            <img src="images/gallery/portrait15.jpg" data-emotion="silence">
+        <div class="emotion silence">
+            <img src="images/emotions/portrait2.jpg">
+            <img src="images/emotions/portrait15.jpg">
         </div>
     </section>
     <section class="emotions-gallery">
         <h3>PEACE</h3>
-        <div class="gallery-flex">
-            <img src="images/gallery/portrait3.jpg" data-emotion="peace">
-            <img src="images/gallery/portrait13.jpg" data-emotion="peace">
-            <img src="images/gallery/portrait18.jpg" data-emotion="peace">
+        <div class="emotion peace">
+            <img src="images/emotions/portrait3.jpg">
+            <img src="images/emotions/portrait13.jpg">
+            <img src="images/emotions/portrait18.jpg">
         </div>
     </section>
     <section class="emotions-gallery">
-        <h3>EXCITEMENTt</h3>
-        <div class="gallery-flex">
-            <img src="images/gallery/portrait4.jpg" data-emotion="excitement">
-            <img src="images/gallery/portrait12.jpg" data-emotion="excitement">
+        <h3>EXCITEMENT</h3>
+        <div class="emotion excitement">
+            <img src="images/emotions/portrait4.jpg">
+            <img src="images/emotions/portrait12.jpg">
         </div>
     </section>
     <section class="emotions-gallery">
         <h3>SADNESS</h3>
-        <div class="gallery-flex">
-            <img src="images/gallery/portrait5.jpg" data-emotion="sadness">
-            <img src="images/gallery/portrait6.jpg" data-emotion="sadness">
-            <img src="images/gallery/portrait17.jpg" data-emotion="sadness">
+        <div class="emotion sadness">
+            <img src="images/emotions/portrait5.jpg">
+            <img src="images/emotions/portrait6.jpg">
+            <img src="images/emotions/portrait17.jpg">
         </div>
     </section>
     <section class="emotions-gallery">
-        <h3></h3>
-    
-        <div class="gallery-flex">
-            <img src="images/gallery/portrait19.jpg" data-emotion="joy">
-            <img src="images/gallery/portrait11.jpg" data-emotion="joy">
-            <img src="images/gallery/portrait8.jpg" data-emotion="joy">
+        <h3>JOY</h3>
+        <div class="emotion joy">
+            <img src="images/emotions/portrait19.jpg">
+            <img src="images/emotions/portrait11.jpg">
+            <img src="images/emotions/portrait8.jpg">
         </div>
     </section>
     <section class="emotions-gallery">
         <h3>LOVE</h3>
-        <div class="gallery-flex">
-            <img src="images/gallery/portrait9.jpg" data-emotion="love">
-            <img src="images/gallery/portrait20.jpg" data-emotion="love">
-        </div>
-    </section>
-    
-  
-    <section class="emotions-gallery">
-        <h3>URBAN</h3>
-        <div class="gallery-flex">
-            <img src="images/urban1.jpg">
-            <img src="images/urban2.jpg">
-            <img src="images/urban3.jpg">
-            <img src="images/urban4.jpg">
-            <img src="images/urban5.jpg">
+        <div class="emotion love">
+            <img src="images/emotions/portrait9.jpg">
+            <img src="images/emotions/portrait20.jpg">
         </div>
     </section>
     <section class ="emotions-gallery">
         <h3>ANXIETY</h3>
-        <div class="gallery-flex">
-            <img src="images/gallery/portrait7.jpg" data-emotion="anxiety">
+        <div class="emotion anxiety">
+            <img src="images/emotions/portrait7.jpg">
         </div>
     </section>
     <section class="emotions-gallery">
         <h3>HOPE</h3>
+<<<<<<< HEAD
         <div class="gallery-flex">
             <img src="images/gallery/portrait16.jpg" data-emotion="hope">
+=======
+        <div class="emotion hope">
+            <img src="images/emotions/portrait16.jpg">
+>>>>>>> da5b5d8 (MEJORAR HTML Y CSS EMOTIONS)
         </div>
     </section>
 </main>
-
-
 <footer>
     <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
 </footer>
