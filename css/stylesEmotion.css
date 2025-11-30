@@ -4,12 +4,8 @@ main {
     margin: 2rem auto;
     flex: 1;
 }
-
 .block-emotion {
-    background: #fff;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0px 3px 10px #00000020;
 }
 
 .filter {
@@ -52,7 +48,7 @@ label.radio span {
 
 .emotions-gallery img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 15px #00000040;
 }
 
 

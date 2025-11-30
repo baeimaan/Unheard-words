@@ -205,9 +205,5 @@ ul {
     transition: color 0.3s;
 }
 
-.menu li a.current,
-.menu li a:hover {
-    color: #fefb8f;
-}
 
 

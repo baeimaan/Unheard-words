@@ -3,7 +3,7 @@ body {
     color: #000000;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Verdana, sans-serif;
 
     min-height: 100vh;
     display: flex;
@@ -111,7 +111,6 @@ button, .banner-button, .menu a {
 .banner-label span {
     font-weight: bold;
     font-size: 1.2rem;
-    color: #ffdf00;
 }
 
 .banner-button {
