@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 <head>
   <title>My Favorites</title>
   <meta charset="UTF-8">
@@ -29,33 +28,111 @@
 <main class="favorites-main">
     <h2>My Favorites</h2>
     <p>Here are all the images you have liked.</p>
-    <div class="gallery-grid" id="favoritesGrid">
-    </div>
+    <div class="gallery-flex" id="favoritesGallery">
+    <div class="photo-card">
+        <img src="images/gallery/portrait1.jpg" alt="portrait1">
+        <a href="favorits.html?images=portrait1.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait2.jpg" alt="portrait2">
+        <a href="favorits.html?images=portrait2.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait3.jpg" alt="portrait3">
+        <a href="favorits.html?images=portrait3.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait4.jpg" alt="portrait4">
+        <a href="favorits.html?images=portrait4.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait5.jpg" alt="portrait5">
+        <a href="favorits.html?images=portrait5.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait6.jpg" alt="portrait6">
+        <a href="favorits.html?images=portrait6.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait7.jpg" alt="portrait7">
+        <a href="favorits.html?images=portrait7.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait8.jpg" alt="portrait8">
+        <a href="favorits.html?images=portrait8.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait9.jpg" alt="portrait9">
+        <a href="favorits.html?images=portrait9.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait10.jpg" alt="portrait10">
+        <a href="favorits.html?images=portrait10.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait11.jpg" alt="portrait11">
+        <a href="favorits.html?images=portrait11.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait12.jpg" alt="portrait12">
+        <a href="favorits.html?images=portrait12.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait13.jpg" alt="portrait13">
+        <a href="favorits.html?images=portrait13.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait14.jpg" alt="portrait14">
+        <a href="favorits.html?images=portrait14.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait15.jpg" alt="portrait15">
+        <a href="favorits.html?images=portrait15.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait16.jpg" alt="portrait16">
+        <a href="favorits.html?images=portrait16.jpg" class="favorite-btn"></a>
+     </div>
+     
+     <div class="photo-card">
+        <img src="images/gallery/portrait17.jpg" alt="portrait17">
+        <a href="favorits.html?images=portrait17.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait18.jpg" alt="portrait18">
+        <a href="favorits.html?images=portrait18.jpg" class="favorite-btn"></a>
+     </div>
+
+     <div class="photo-card">
+        <img src="images/gallery/portrait19.jpg" alt="portrait19">
+        <a href="favorits.html?images=portrait19.jpg" class="favorite-btn"></a>
+     </div>
+     
+    <div class="photo-card">
+        <img src="images/gallery/portrait20.jpg" alt="portrait20">
+        <a href="favorits.html?images=portrait20.jpg" class="favorite-btn"></a>
+     </div>
 </main>
 
 <footer>
     <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
 </footer>
 
-<script>
-  const favoritesGrid = document.getElementById('favoritesGrid');
-  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
-  favorites.forEach(img => {
-      const div = document.createElement('div');
-      div.className = 'photo-card';
-      div.innerHTML = `
-          <img src="images/${img}" alt="Favorite photo">
-          <button onclick="removeFavorite('${img}')">❌ Remove</button>
-      `;
-      favoritesGrid.appendChild(div);
-  });
-
-  function removeFavorite(imgName) {
-      const updatedFavorites = favorites.filter(img => img !== imgName);
-      localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
-      location.reload();
-  }
-</script>
 </body>
 </html>
