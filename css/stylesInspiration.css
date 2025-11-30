@@ -28,7 +28,6 @@
     margin: 10px;
     border-radius: 20px;
     position: relative;
-    overflow-y: hidden;
 }
 .photo-card img {
     width: 100%;
@@ -43,7 +42,6 @@
     margin: 10px;
     border-radius: 20px;
     position: relative;
-    overflow-y: hidden;
 }
 
 .favorite-photo img {
