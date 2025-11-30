@@ -19,21 +19,20 @@ main {
     padding-left: 10px;
 }
 
-
 .gallery-flex {
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    gap: 10px;
 }
 
 .gallery-flex img {
-    width: 220px;
+    max-width: 150px;
     height: 180px;
+    display: block;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+
 }
 
 .gallery-flex img:hover {
