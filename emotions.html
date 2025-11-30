@@ -29,9 +29,9 @@
 </header>
 
 <main>
-  <h2>Inspiration</h2>
+  <h2>Emotion-filter</h2>
   <p>A collection of all the images on the website.</p>
-  <label for="emotion-filter">Select an emotion:</label>
+  <label for="emotions-gallery">Select an emotion:</label>
     <select onchange="location = this.value" id="emotion-filter">
         <option value="#all emotions">All emotions</option>
         <option value="peace">Peace</option>
@@ -48,110 +48,124 @@
         <option value="anger">Anger</option>
         <option value="hope">Hope</option>
     </select>
+
+    <main class="emotions-gallery">
+    <h2>Emotions-Gallery</h2>
+
+    <section class="emotions-gallery">
+        <h3>FEAR</h3>
+        <div class="gallery-flex">
+            <img src="images/gallery/portrait.jpg" data-emotion="fear">
+            <img src="images/gallery/portrait10.jpg" data-emotion="fear">
+            <img src="images/gallery/portrait14.jpg" data-emotion="fear">
+        </div>
+    </section>
+    <section class="emotions-gallery">
+        <h3>BOREDOM</h3>
+        <div class="gallery-flex">
+            <img src="images/inspiration/portrait1.jpg" data-emotion="boredom">
+        </div>
+
   </section>
-      <h2>Photo gallery</h2>
-    <div class="gallery-flex" id="favoritesGallery">
-    <div class="photo-card">
-        <img src="images/gallery/portrait1.jpg" alt="portrait1">
-        <a href="favorits.html?images=portrait1.jpg" class="favorite-btn"></a>
-     </div>
+    <section class="emotions-gallery">
+        <h3>SILENCE</h3>
+        <div class="gallery-flex">
+            <img src="images/gallery/portrait2.jpg" data-emotion="silence">
+            <img src="images/gallery/portrait15.jpg" data-emotion="silence">
+        </div>
+    </section>
+    <section class="emotions-gallery">
+        <h3>PEACE</h3>
+        <div class="gallery-flex">
+            <img src="images/gallery/portrait3.jpg" data-emotion="peace">
+            <img src="images/gallery/portrait13.jpg" data-emotion="peace">
+            <img src="images/gallery/portrait18.jpg" data-emotion="peace">
+        </div>
+    </section>
+    <section class="emotions-gallery">
+        <h3>EXCITEMENTt</h3>
+        <div class="gallery-flex">
+            <img src="images/gallery/portrait4.jpg" data-emotion="excitement">
+            <img src="images/gallery/portrait12.jpg" data-emotion="excitement">
+        </div>
+    </section>
+    <section class="emotions-gallery">
+        <h3>SADNESS</h3>
+        <div class="gallery-flex">
+            <img src="images/gallery/portrait5.jpg" data-emotion="sadness">
+            <img src="images/gallery/portrait6.jpg" data-emotion="sadness">
+            <img src="images/gallery/portrait17.jpg" data-emotion="sadness">
+        </div>
+    </section>
+    <section class="emotions-gallery">
+        <h3></h3>
+    
+        <div class="gallery-flex">
+            <img src="images/gallery/portrait19.jpg" data-emotion="joy">
+            <img src="images/gallery/portrait11.jpg" data-emotion="joy">
+            <img src="images/gallery/portrait8.jpg" data-emotion="joy">
+        </div>
+    </section>
+    <section class="emotions-gallery">
+        <h3>LOVE</h3>
+        <div class="gallery-flex">
+            <img src="images/gallery/portrait9.jpg" data-emotion="love">
+            <img src="images/gallery/portrait20.jpg" data-emotion="love">
+        </div>
+    </section>
+    
+  
+    <section class="emotions-gallery">
+        <h3>URBAN</h3>
+        <div class="gallery-flex">
+            <img src="images/urban1.jpg">
+            <img src="images/urban2.jpg">
+            <img src="images/urban3.jpg">
+            <img src="images/urban4.jpg">
+            <img src="images/urban5.jpg">
+        </div>
+    </section>
+    <section class ="emotions-gallery">
+        <h3>ANXIETY</h3>
+        <div class="gallery-flex">
+            <img src="images/gallery/portrait7.jpg" data-emotion="anxiety">
+        </div>
+    </section>
+    <section class="emotions-gallery">
+        <h3>HOPE</h3>
+        <div class="gallery-flex">
+            <img src="images/gallery/portrait16.jpg" data-emotion="hope">
+        </div>
+    </section>
 
-     <div class="photo-card">
-        <img src="images/gallery/portrait2.jpg" alt="portrait2">
-        <a href="favorits.html?images=portrait2.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait3.jpg" alt="portrait3">
-        <a href="favorits.html?images=portrait3.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait4.jpg" alt="portrait4">
-        <a href="favorits.html?images=portrait4.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait5.jpg" alt="portrait5">
-        <a href="favorits.html?images=portrait5.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait6.jpg" alt="portrait6">
-        <a href="favorits.html?images=portrait6.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait7.jpg" alt="portrait7">
-        <a href="favorits.html?images=portrait7.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait8.jpg" alt="portrait8">
-        <a href="favorits.html?images=portrait8.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait9.jpg" alt="portrait9">
-        <a href="favorits.html?images=portrait9.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait10.jpg" alt="portrait10">
-        <a href="favorits.html?images=portrait10.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait11.jpg" alt="portrait11">
-        <a href="favorits.html?images=portrait11.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait12.jpg" alt="portrait12">
-        <a href="favorits.html?images=portrait12.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait13.jpg" alt="portrait13">
-        <a href="favorits.html?images=portrait13.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait14.jpg" alt="portrait14">
-        <a href="favorits.html?images=portrait14.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait15.jpg" alt="portrait15">
-        <a href="favorits.html?images=portrait15.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait16.jpg" alt="portrait16">
-        <a href="favorits.html?images=portrait16.jpg" class="favorite-btn"></a>
-     </div>
-     
-     <div class="photo-card">
-        <img src="images/gallery/portrait17.jpg" alt="portrait17">
-        <a href="favorits.html?images=portrait17.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait18.jpg" alt="portrait18">
-        <a href="favorits.html?images=portrait18.jpg" class="favorite-btn"></a>
-     </div>
-
-     <div class="photo-card">
-        <img src="images/gallery/portrait19.jpg" alt="portrait19">
-        <a href="favorits.html?images=portrait19.jpg" class="favorite-btn"></a>
-     </div>
-     
-    <div class="photo-card">
-        <img src="images/gallery/portrait20.jpg" alt="portrait20">
-        <a href="favorits.html?images=portrait20.jpg" class="favorite-btn"></a>
-     </div>
-  </section>
+    <section class="emotions-gallery">
+        <h3>Portraits</h3>
+        <div class="gallery-flex">
+            <img src="images/gallery/portrait.jpg" data-emotion="fear">
+            <img src="images/gallery/portrait1.jpg" data-emotion="boredom">
+            <img src="images/gallery/portrait2.jpg" data-emotion="silence">
+            <img src="images/gallery/portrait3.jpg" data-emotion="peace">
+            <img src="images/gallery/portrait4.jpg" data-emotion="excitement">
+            <img src="images/gallery/portrait5.jpg" data-emotion="sadness">
+            <img src="images/gallery/portrait6.jpg" data-emotion="sadness">
+            <img src="images/gallery/portrait7.jpg" data-emotion="anxiety">
+            <img src="images/gallery/portrait8.jpg" data-emotion="joy">
+            <img src="images/gallery/portrait9.jpg" data-emotion="love">
+            <img src="images/gallery/portrait10.jpg" data-emotion="fear">
+            <img src="images/gallery/portrait11.jpg" data-emotion="joy">
+            <img src="images/gallery/portrait12.jpg" data-emotion="excitement">
+            <img src="images/gallery/portrait13.jpg" data-emotion="peace">
+            <img src="images/gallery/portrait14.jpg" data-emotion="fear">
+            <img src="images/gallery/portrait15.jpg" data-emotion="silence">
+            <img src="images/gallery/portrait16.jpg" data-emotion="hope">
+            <img src="images/gallery/portrait17.jpg" data-emotion="sadness">
+            <img src="images/gallery/portrait18.jpg" data-emotion="peace">
+            <img src="images/gallery/portrait19.jpg" data-emotion="joy">
+            <img src="images/gallery/portrait20.jpg" data-emotion="love">
+        </div>
+    </section>
 </main>
+
 
 <footer>
     <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
