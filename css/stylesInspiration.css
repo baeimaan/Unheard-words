@@ -1,10 +1,14 @@
-.gallery-grid {
+.gallery-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-left: -10px;
 }
-
+.favorited {
+    background-color: #ffcccc;
+    color: red;
+    font-weight: bold;
+}
 .photo-card {
     aspect-ratio: 3 / 4; 
     width: 180px;

@@ -159,10 +159,7 @@ ul {
     max-width: 300px;
 }
 
-.feature-item.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+
 .feature-section.emotions-feature {
     background-color: #f09fd1;
     padding: 100px 20px;
@@ -171,9 +168,6 @@ ul {
     transition: transform 0.8s ease-out;
 }
 
-.feature-section.emotions-feature.show-section {
-    transform: translateY(0);
-}
 
 .preview-gallery {
     margin-top: 40px;
@@ -215,17 +209,5 @@ ul {
     margin-top: 20px;
 }
 
-.menu li a {
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 5px 10px;
-    transition: color 0.3s;
-}
-
-.menu li a.current,
-.menu li a:hover {
-    color: #236238;
-}
 
 

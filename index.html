@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -17,7 +17,6 @@
   </div>
 
   <div class="search-container">
-    <!-- Formulario sin JS -->
     <form class="search-form" action="emotions.html" method="get">
       <input type="text" name="emotion" placeholder="Which emotion are you looking for?">
       <button type="submit">Search</button>
@@ -135,38 +134,5 @@
 <footer>
   <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
 </footer>
-
-<script>
-function searchEmotion() {
-    const query = document.getElementById('global-search').value.trim().toLowerCase();
-    if (!query) {
-        alert('Please enter an emotion to search.');
-        return false;
-    }
-
-    window.location.href = `emotions.html?emotion=${encodeURIComponent(query)}`;
-    return false;
-}
-</script>
-
-<script>
-const featureSections = document.querySelectorAll('.feature-section');
-const items = document.querySelectorAll('.feature-item');
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-
-  featureSections.forEach(section => {
-    section.style.transform = `translateY(${scrollY * -0.2}px)`;
-  });
-  const triggerBottom = window.innerHeight * 0.8;
-  items.forEach(item => {
-    const itemTop = item.getBoundingClientRect().top;
-    if(itemTop < triggerBottom){
-      item.classList.add('show');
-    }
-  });
-});
-</script>
 </body>
 </html>

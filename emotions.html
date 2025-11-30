@@ -43,76 +43,43 @@
         <option value="joy">Joy</option>
         <option value="happiness">Happiness</option>
         <option value="sadness">Sadness</option>
-        <option value="Yearning">Yearning</option>
-        <option value="escapism">Escapism</option>
-        <option value="The art of touch">The art of touch</option>
-        <option value="Numbness">Numbness</option>
-        <option value="Lingering Gaze">Lingering Gaze</option>
-        <option value="Kintsugi emotions">Kintsugi emotions</option>
-        <option value="Kora">Kora</option>
+        <option value="love">Love</option>
+        <option value="stress">Stress</option>
+        <option value="fear">Fear</option>
+        <option value="boredom">Boredom</option>
+        <option value="excitement">Excitement</option>
+        <option value="anger">Anger</option>
+        <option value="hope">HopeKora</option>
     </select>
   </section>
   <section class="feature-section" id="emotion-feature">
       <div class="feature-container">
           <h2>Photo gallery</h2>
 
-          <div class="feature-grid" id="emotion-gallery">
+          <div class="feature-flex" id="emotion-gallery">
               
-              <div class="feature-item" data-emotion="peace">
-                  <img src="images/land4.jpg" alt="Peaceful moment">
-                  <p>Peaceful moment</p>
-              </div>
-
-              <div class="feature-item" data-emotion="anxiety">
-                  <img src="images/portrait7.jpg" alt="Anxious">
-                  <p>Hidden emotions</p>
-              </div>
-
-              <div class="feature-item" data-emotion="joy,happiness">
-                  <img src="images/portrait8.jpg" alt="Joyful light">
-                  <p>Joy</p>
-              </div>
-
-              <div class="feature-item" data-emotion="sadness">
-                  <img src="images/index2/sadness.jpg" alt="Sadness">
-                  <p>Quiet sadness</p>
-              </div>
-
-              <div class="feature-item" data-emotion="Yearning">
-                  <img src="images/index/yearning.jpg" alt="Yearning">
-                  <p>Yearning</p>
-              </div>
-
-              <div class="feature-item" data-emotion="escapism">
-                  <img src="images/index/escapism.jpg" alt="escapism">
-                  <p>Escapism</p>
-              </div>
-
-              <div class="feature-item" data-emotion="The art of touch">
-                  <img src="images/index/toFeel.jpg" alt="The art of touch">
-                  <p>The art of sensing through touch</p>
-              </div>
-
-              <div class="feature-item" data-emotion="Numbness">
-                  <img src="images/index/numbness.jpg" alt="Numbness">
-                  <p>Numbness</p>
-              </div>
-
-              <div class="feature-item" data-emotion="Lingering Gaze">
-                  <img src="images/index2/lingeringGaze.jpg" alt="Lingering Gaze">
-                  <p>Lingering Gaze</p>
-              </div>
-
-              <div class="feature-item" data-emotion="Kintsugi emotions">
-                  <img src="images/index2/kintsugiEmotions.jpg" alt="Kintsugi emotions">
-                  <p>Kintsugi emotions</p>
-              </div>
-
-              <div class="feature-item" data-emotion="Kora">
-                  <img src="images/index2/kora.jpg" alt="Kora">
-                  <p>Kora</p>
-              </div>
-
+            <div class="feature-item" data-emotion="peace">
+                <img src="images/gallery/portrait1.jpg" data-emotion="boredom">
+                <img src="images/gallery/portrait2.jpg" data-emotion="silence">
+                <img src="images/gallery/portrait3.jpg" data-emotion="peace"> 
+                <img src="images/gallery/portrait4.jpg" data-emotion="excitement"> 
+                <img src="images/gallery/portrait5.jpg" data-emotion="sadness"> 
+                <img src="images/gallery/portrait6.jpg" data-emotion="sadness"> 
+                <img src="images/gallery/portrait7.jpg" data-emotion="anxiety">
+                <img src="images/gallery/portrait8.jpg" data-emotion="joy"> 
+                <img src="images/gallery/portrait9.jpg" data-emotion="love"> 
+                <img src="images/gallery/portrait10.jpg" data-emotion="fear"> 
+                <img src="images/gallery/portrait11.jpg" data-emotion="joy"> 
+                <img src="images/gallery/portrait12.jpg" data-emotion="excitement"> 
+                <img src="images/gallery/portrait13.jpg" data-emotion="peace"> 
+                <img src="images/gallery/portrait14.jpg" data-emotion="fear"> 
+                <img src="images/gallery/portrait15.jpg" data-emotion="silence"> 
+                <img src="images/gallery/portrait16.jpg" data-emotion="hope"> 
+                <img src="images/gallery/portrait17.jpg" data-emotion="sadness"> 
+                <img src="images/gallery/portrait18.jpg" data-emotion="peace"> 
+                <img src="images/gallery/portrait19.jpg" data-emotion="joy"> 
+                <img src="images/gallery/portrait20.jpg" data-emotion="love">        
+            </div>
           </div>
       </div>
   </section>
@@ -121,58 +88,6 @@
 <footer>
     <p>&copy; 2025 UnheardWords. Explore the world through photographs that capture every emotion. All rights reserved.</p>
 </footer>
-
-<script>
-const filter = document.getElementById('emotion-filter');
-const gallery = document.getElementById('emotion-gallery');
-const items = gallery.querySelectorAll('.feature-item');
-
-function filterPhotos(emotion) {
-    items.forEach(item => {
-        const emotions = item.dataset.emotion.split(',');
-        if (!emotion || emotions.includes(emotion)) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-}
-
-filter.addEventListener('change', () => {
-    filterPhotos(filter.value);
-});
-
-function getEmotionFromURL() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get('emotion');
-}
-
-const initialEmotion = getEmotionFromURL();
-if (initialEmotion) {
-    filter.value = initialEmotion;
-    filterPhotos(initialEmotion);
-}
-
-const section = document.querySelector('.feature-section');
-const featureItems = document.querySelectorAll('.feature-item');
-
-function checkScroll() {
-    const trigger = window.innerHeight * 0.85;
-
-    if (section.getBoundingClientRect().top < trigger) {
-        section.classList.add("show-section");
-    }
-
-    featureItems.forEach(item => {
-        if (item.getBoundingClientRect().top < trigger) {
-            item.classList.add("show");
-        }
-    });
-}
-
-window.addEventListener("scroll", checkScroll);
-window.addEventListener("load", checkScroll);
-</script>
 
 </body>
 </html>
