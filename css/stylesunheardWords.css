@@ -41,7 +41,7 @@ ul {
     padding: 0.5rem 1rem;
     border: none;
     background-color: #236238;
-    color: #ffffff;
+    color: #fff;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 500;
@@ -49,8 +49,9 @@ ul {
 }
 
 .search-form button:hover {
-    background-color: #000000;
+    background-color: #000;
 }
+
 .intro-section {
     padding: 120px 20px;
     max-width: 1100px;
@@ -75,7 +76,6 @@ ul {
 
 .intro-description {
     font-size: 1.125rem;
-    font-weight: 400;
     color: #777;
     margin-bottom: 60px;
     line-height: 1.6;
@@ -95,19 +95,17 @@ ul {
 
 .feature-block h2 {
     font-size: 1.5rem;
-    font-weight: 600;
 }
 
 .feature-block p {
     font-size: 1rem;
     color: #555;
 }
+
 .feature-section {
-    background-color: #335437c3;
-    padding: 100px 00px 50px 0px;
-    overflow: hidden;
-    position: relative;
-    transform: translateY(0);
+    padding: 100px 0 50px 0;
+    text-align: center;
+    background-color: #496f4f;
 }
 
 .second-feature {
@@ -137,29 +135,16 @@ ul {
     margin-top: 50px;
 }
 
-.feature-item img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.feature-item p {
-    margin-top: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: #333;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
 .feature-item {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease;
-    flex:1 1 200px;
+    text-align: center;
+    flex: 1 1 200px;
     max-width: 300px;
 }
 
-
+.feature-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 .feature-section.emotions-feature {
     background-color: #f09fd1;
     padding: 100px 20px;
@@ -168,6 +153,9 @@ ul {
     transition: transform 0.8s ease-out;
 }
 
+.feature-section.emotions-feature.show-section {
+    transform: translateY(0);
+}
 
 .preview-gallery {
     margin-top: 40px;
@@ -209,5 +197,17 @@ ul {
     margin-top: 20px;
 }
 
+.menu li a {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.menu li a.current,
+.menu li a:hover {
+    color: #236238;
+}
 
 
