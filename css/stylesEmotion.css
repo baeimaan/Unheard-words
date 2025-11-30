@@ -6,50 +6,44 @@ main {
     flex: 1;
 }
 
+.block-emotion {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 3px 10px #00000020;
+}
+
 .filter {
-    background-color: #ffffff;
+    background-color: #f6f6f6;
     padding: 1rem 2rem;
     border-radius: 10px;
     box-shadow: 0px 3px 10px #00000020;
     margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
 }
 
-.filter p {
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.filter .checkbox {
-    display: inline-flex;
+label.radio {
+    display: flex;
     align-items: center;
-    margin-right: 15px;
-    margin-bottom: 10px;
     cursor: pointer;
+    gap: 10px;
 }
 
-.filter .checkbox input[type="checkbox"] {
-    margin-right: 5px;
-    width: 18px;
-    height: 18px;
+input[type="radio"] {
+    margin-right: 6px;
+    width: 16px;
+    height: 16px;
 }
 
-.category {
-    margin-bottom: 3rem;
+.label.radio span {
+    font-size: 1rem;
+    margin-left: 5px;
 }
-
-.category h3 {
-    font-size: 1.8rem;
-    color: #236238;
-    text-align: left;
-    margin-bottom: 1rem;
-    border-left: 6px solid #236238;
-    padding-left: 10px;
-}
-
 
 .emotion {
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 10px;
 }
@@ -60,7 +54,7 @@ main {
     display: block;
     object-fit: cover;
     border-radius: 10px;
-
+    display: none;
 }
 
 .emotion img:hover {
@@ -68,22 +62,25 @@ main {
     box-shadow: 0px 4px 15px #00000040;
 }
 
-
-#all:checked ~ .emotions-gallery .emotion img {
+.emotions-gallery {
     display: block;
 }
-#peace:checked ~ .emotions-gallery .peace img,
-#happiness:checked ~ .emotions-gallery .happiness img,
-#fear:checked ~ .emotions-gallery .fear img,
-#boredom:checked ~ .emotions-gallery .boredom img,
-#silence:checked ~ .emotions-gallery .silence img,
-#anxiety:checked ~ .emotions-gallery .anxiety img,
-#joy:checked ~ .emotions-gallery .joy img,
-#sadness:checked ~ .emotions-gallery .sadness img,
-#stress:checked ~ .emotions-gallery .stress img,
-#excitement:checked ~ .emotions-gallery .excitement img,
-#anger:checked ~ .emotions-gallery .anger img,
-#hope:checked ~ .emotions-gallery .hope img,
-#love:checked ~ .emotions-gallery .love img {
+
+#all:checked ~ .gallery .emotion img {
+    display: block;
+}
+
+#peace:checked ~ .gallery #peace-gallery .emotion img,
+#silence:checked ~ .gallery #silence-gallery .emotion img,
+#fear:checked ~ .gallery #fear-gallery .emotion img,
+#boredom:checked ~ .gallery #boredom-gallery .emotion img,
+#anxiety:checked ~ .gallery #anxiety-gallery .emotion img,
+#joy:checked ~ .gallery #joy-gallery .emotion img,
+#sadness:checked ~ .gallery #sadness-gallery .emotion img,
+#stress:checked ~ .gallery #stress-gallery .emotion img,
+#excitement:checked ~ .gallery #excitement-gallery .emotion img,
+#anger:checked ~ .gallery #anger-gallery .emotion img,
+#hope:checked ~ .gallery #hope-gallery .emotion img,
+#love:checked ~ .gallery #love-gallery .emotion img {
     display: block;
 }
